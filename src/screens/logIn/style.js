@@ -13,6 +13,14 @@ var styles = StyleSheet.create({
         alignItems: 'center',
     },
 
+    backButton: {
+        position: 'absolute',
+        width: 20,
+        height: 16,
+        left: 20,
+        top: 20
+    },
+
     headerContainer: {
         flexDirection: 'row',
         justifyContent: 'center',

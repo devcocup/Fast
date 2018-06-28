@@ -16,6 +16,10 @@ class LogIn extends Component {
     render() {
         return (
             <LinearGradient colors={['#36D1DC', '#185A9D']} style={styles.container}>
+                <TouchableOpacity style={styles.backButton} onPress={() => NavigationActions.pop()}>
+                    <Image source={require('../../assets/images/back.png')}/>
+                </TouchableOpacity>
+                
                 <View style={styles.headerContainer}>
                     <Image source={require('../../assets/images/logo.png')} style={styles.headerImage}/>
                     <Text style={styles.headerText}>FAST</Text>
