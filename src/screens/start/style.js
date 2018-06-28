@@ -5,11 +5,12 @@ import {
     Dimensions
 } from 'react-native';
 
+const {height, width} = Dimensions.get('window')
+
 var styles = StyleSheet.create({
     container: {
         flex: 1,
         alignItems: 'center',
-        backgroundColor: 'blue'
     },
 
     headerContainer: {
@@ -42,7 +43,7 @@ var styles = StyleSheet.create({
 
     loginButton: {
         backgroundColor: 'white',
-        width: 250,
+        width: width * 0.6,
         height: 45,
         alignItems: 'center',
         justifyContent: 'center',
@@ -52,7 +53,7 @@ var styles = StyleSheet.create({
 
     facebookButton: {
         backgroundColor: '#4C6DB4',
-        width: 250,
+        width: width * 0.6,
         height: 45,
         alignItems: 'center',
         justifyContent: 'center',
@@ -62,7 +63,7 @@ var styles = StyleSheet.create({
 
     signupButton: {
         backgroundColor: 'white',
-        width: 250,
+        width: width * 0.6,
         height: 45,
         alignItems: 'center',
         justifyContent: 'center',

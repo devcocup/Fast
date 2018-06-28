@@ -19,7 +19,8 @@ import {
   ActionConst
 } from 'react-native-router-flux';
 
-import Start from './src/screens/start/index'
+import Start from './src/screens/start/index';
+import SignUp from './src/screens/signUp/index';
 
 export default class App extends Component<{}> {
   render() {
@@ -27,6 +28,7 @@ export default class App extends Component<{}> {
       <Router>
         <Scene key="root">
           <Scene initial key="start" hideNavBar component={Start}/>
+          <Scene key="signUp" hideNavBar component={SignUp}/>
         </Scene>
       </Router>
     );

@@ -6,6 +6,7 @@ import {
     TouchableOpacity,
     Image
 } from 'react-native';
+
 import { Actions as NavigationActions } from 'react-native-router-flux';
 import LinearGradient from 'react-native-linear-gradient'
 
@@ -32,7 +33,7 @@ class Start extends Component {
                 
                 <Text style={[styles.bodyText, {'marginTop': '25%'}]}>New User?</Text>
                 
-                <TouchableOpacity style={styles.signupButton}>
+                <TouchableOpacity style={styles.signupButton} onPress={() => NavigationActions.signUp()}>
                     <Text style={{'color': '#1961A1', 'fontSize': 15}}>Sign Up</Text>
                 </TouchableOpacity>
             </LinearGradient>
