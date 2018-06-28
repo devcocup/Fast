@@ -43,7 +43,7 @@ class LogIn extends Component {
                         style={styles.textInput}/>
                 </View>
                 
-                <TouchableOpacity style={{'marginTop':'25%'}}>
+                <TouchableOpacity style={{'marginTop':'25%'}} onPress={() => NavigationActions.quickstart()}>
                     <Text style={{'color': '#1961A1', 'fontSize': 15}}>Log In</Text>
                 </TouchableOpacity>
 

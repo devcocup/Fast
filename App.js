@@ -23,6 +23,7 @@ import Start from './src/screens/start/index';
 import SignUp from './src/screens/signUp/index';
 import LogIn from './src/screens/logIn/index';
 import ForgotPassword from './src/screens/forgot/index';
+import QuickStart from './src/screens/quickStart/index';
 
 export default class App extends Component<{}> {
   render() {
@@ -33,6 +34,7 @@ export default class App extends Component<{}> {
           <Scene key="signup" hideNavBar component={SignUp}/>
           <Scene key="login" hideNavBar component={LogIn}/>
           <Scene key="forgot" hideNavBar component={ForgotPassword}/>
+          <Scene key="quickstart" hideNavBar component={QuickStart}/>
         </Scene>
       </Router>
     );
