@@ -21,6 +21,7 @@ import {
 
 import Start from './src/screens/start/index';
 import SignUp from './src/screens/signUp/index';
+import LogIn from './src/screens/logIn/index';
 
 export default class App extends Component<{}> {
   render() {
@@ -28,7 +29,8 @@ export default class App extends Component<{}> {
       <Router>
         <Scene key="root">
           <Scene initial key="start" hideNavBar component={Start}/>
-          <Scene key="signUp" hideNavBar component={SignUp}/>
+          <Scene key="signup" hideNavBar component={SignUp}/>
+          <Scene key="login" hideNavBar component={LogIn}/>
         </Scene>
       </Router>
     );

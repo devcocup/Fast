@@ -23,7 +23,7 @@ class Start extends Component {
 
                 <Text style={styles.bodyText}>Let's Pay and Queue with FAST.</Text>
                 
-                <TouchableOpacity style={styles.loginButton}>
+                <TouchableOpacity style={styles.loginButton} onPress={() => NavigationActions.login()}>
                     <Text style={{'color': '#1961A1', 'fontSize': 15}}>Log In</Text>
                 </TouchableOpacity>
                 
@@ -33,7 +33,7 @@ class Start extends Component {
                 
                 <Text style={[styles.bodyText, {'marginTop': '25%'}]}>New User?</Text>
                 
-                <TouchableOpacity style={styles.signupButton} onPress={() => NavigationActions.signUp()}>
+                <TouchableOpacity style={styles.signupButton} onPress={() => NavigationActions.signup()}>
                     <Text style={{'color': '#1961A1', 'fontSize': 15}}>Sign Up</Text>
                 </TouchableOpacity>
             </LinearGradient>
