@@ -10,11 +10,11 @@ const {height, width} = Dimensions.get('window')
 var styles = StyleSheet.create({
     container: {
         flex: 1,
-        marginTop: height * 0.07,
-        marginBottom: height * 0.07,
-        borderTopRightRadius: 20,
-        borderBottomRightRadius: 20,
-        height: height * 0.85
+        // marginTop: height * 0.07,
+        // marginBottom: height * 0.07,
+        // borderTopRightRadius: 20,
+        // borderBottomRightRadius: 20,
+        // height: height * 0.85
     },
 
     menuButton: {
@@ -54,6 +54,7 @@ var styles = StyleSheet.create({
     rewardContainer: {
         alignItems: 'center',
         flexDirection: 'row',
+        marginTop: 10
     },
 
     menuItems: {
@@ -79,7 +80,8 @@ var styles = StyleSheet.create({
     },
 
     footer: {
-        marginTop: 30
+        position: 'absolute',
+        bottom: 20
     }
 });
 

@@ -36,7 +36,7 @@ export default class App extends Component<{}> {
           <Scene key="login" hideNavBar component={LogIn}/>
           <Scene key="forgot" hideNavBar component={ForgotPassword}/>
           <Scene key="quickstart" hideNavBar component={QuickStart}/>
-          <Drawer key="menu" hideNavBar drawerImage={require('./src/assets/images/menu_icon.png')} contentComponent={SideMenu}>
+          <Drawer key="menu" hideNavBar drawerImage={require('./src/assets/images/menu_icon.png')} contentComponent={SideMenu} navTransparent={true}>
             <Scene key="home" hideNavBar component={Home}/>
           </Drawer>
         </Scene>
