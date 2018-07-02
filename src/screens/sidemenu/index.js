@@ -37,7 +37,7 @@ class SideMenu extends Component {
                     </TouchableOpacity>
 
                     <TouchableOpacity style={styles.menuItemContainer} onPress={() => {}}>
-                        <Image source={require('../../assets/images/order_icon.png')} style={styles.menuItemImage}/>
+                        <Image source={require('../../assets/images/order_history_icon.png')} style={styles.menuItemImage}/>
                         <Text style={styles.menuItemText}>Order History</Text>
                     </TouchableOpacity>
 

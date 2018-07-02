@@ -3,7 +3,7 @@ import { View, Text, Image, StyleSheet, Dimensions } from 'react-native'
 
 const { width } = Dimensions.get('window')
 
-const QuickStartCard = ({content}) => {
+const DailyDealCard = ({content}) => {
 
     return (
         <View style={styles.container}>
@@ -45,4 +45,4 @@ const styles = StyleSheet.create({
     }
 })
 
-export default QuickStartCard
+export default DailyDealCard

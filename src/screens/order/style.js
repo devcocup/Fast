@@ -10,32 +10,37 @@ const {height, width} = Dimensions.get('window')
 var styles = StyleSheet.create({
     container: {
         flex: 1,
+        alignItems: 'center',
+    },
+
+    backButton: {
+        position: 'absolute',
+        width: 20,
+        height: 16,
+        left: 20,
+        top: 20
     },
 
     headerContainer: {
         flexDirection: 'row',
-        marginTop: 20,
-        paddingLeft: 20,
-        paddingRight: 20
+        justifyContent: 'center',
+        marginTop: "20%",
     },
 
-    menuButton: {
-        width: 20,
-        height: 15,
+    headerImage: {
+        width: 60,
+        height: 90,
         resizeMode: 'contain'
     },
 
     headerText: {
-        flex: 1,
-        color: '#6A6A6A',
-        fontSize: 13,
-        marginLeft: 20
-    },
-
-    searchButton: {
-        width: 20,
-        height: 20,
-        resizeMode: 'contain'
+        color: 'white',
+        fontSize: 50,
+        textAlign: 'center',
+        textAlignVertical: 'center',
+        fontWeight: '800',
+        marginLeft: 20,
+        height: 80
     },
 
     bodyText: {
