@@ -28,21 +28,25 @@ class Home extends Component {
                         <Image source={require('../../assets/images/search.png')} style={styles.searchButton}/>
                     </TouchableOpacity>
                 </View>
-                <View>
-                    <View>
-                        <Image source={require('../../assets/images/weather.png')}/>
-                        <Text>28</Text>
-                        <Text>Singapore</Text>
-                    </View>
 
-                    <View>
-                        <Text>11:30</Text>
-                        <Text>AM</Text>
-                        <Text>Lunchtime</Text>
-                    </View>
+                <View style={styles.bodyContainer}>
+                    <View style={styles.topContainer}>
+                        <View>
+                            <Image source={require('../../assets/images/weather.png')} style={styles.weatherImage}/>
+                            <Text style={styles.countryText}>Singapore</Text>
+                        </View>
 
-                    <View>
-                        <Image source={require('../../assets/images/settings.png')}/>
+                        <View style={styles.timeContainer}>
+                            <View style={{flexDirection: 'column'}}>
+                                <Text style={styles.timeText}>11:30</Text>
+                                <Text style={{fontSize: 15, marginLeft: 5}}>AM</Text>
+                            </View>
+                            <Text>Lunchtime</Text>
+                        </View>
+
+                        <View>
+                            <Image source={require('../../assets/images/settings.png')}/>
+                        </View>
                     </View>
 
                     <View>

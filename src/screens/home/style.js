@@ -38,16 +38,48 @@ var styles = StyleSheet.create({
         resizeMode: 'contain'
     },
 
+    bodyContainer: {
+        margin: 20,
+        borderBottomLeftRadius: 10,
+        borderBottomRightRadius: 10
+    },
+
+    topContainer: {
+        flexDirection: 'row'
+    },
+
+    weatherImage: {
+        marginLeft: 10,
+        width: 70,
+        height: 70,
+        resizeMode: 'contain'
+    },
+
+    countryText: {
+        fontSize: 10,
+        textAlign: 'center'
+    },
+
+    timeContainer: {
+        flex: 1,
+    },
+
+    timeText: {
+        fontSize: 32,
+        fontWeight: 'bold',
+        textAlign: 'center'
+    },
+
     bodyText: {
         color: 'white',
         fontSize: 15,
         fontStyle: 'italic'
     },
 
-    bodyContainer: {
-        width: width * 0.6,
-        marginTop: '20%'
-    },
+    // bodyContainer: {
+    //     width: width * 0.6,
+    //     marginTop: '20%'
+    // },
 
     textInput: {
         // width: width * 0.6,
