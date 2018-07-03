@@ -86,7 +86,7 @@ class SignUp extends Component {
                     />
                 </View>
                 
-                <TouchableOpacity style={styles.doneButton}>
+                <TouchableOpacity style={styles.doneButton} onPress={() => NavigationActions.verify()}>
                     <Text style={{fontFamily: 'Ubuntu-M', color: '#1961A1', fontSize: 15}}>Done</Text>
                 </TouchableOpacity>
 

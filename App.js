@@ -19,6 +19,7 @@ import {
 import SignUp from './src/screens/signUp/index';
 import LogIn from './src/screens/logIn/index';
 import ForgotPassword from './src/screens/forgot/index';
+import Verify from './src/screens/verify/index';
 // import QuickStart from './src/screens/quickStart/index';
 // import Home from './src/screens/home/index';
 // import SideMenu from './src/screens/sidemenu/index';
@@ -51,6 +52,7 @@ export default class App extends Component {
           <Scene initial key="login" hideNavBar component={LogIn}/>
           <Scene key="signup" hideNavBar component={SignUp}/>
           <Scene key="forgot" hideNavBar component={ForgotPassword}/>
+          <Scene key="verify" hideNavBar component={Verify}/>
           {/* <Scene key="quickstart" hideNavBar component={QuickStart}/> */}
           {/* <Drawer key="menu" hideNavBar drawerImage={require('./src/assets/images/menu_icon.png')} contentComponent={SideMenu} navTransparent={true}>
             <Scene key="tabs" tabs={true} tabBarPosition='bottom' activeTintColor={'#185A9D'} inactiveTintColor={'#5A6E82'}>
