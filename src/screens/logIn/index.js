@@ -49,16 +49,16 @@ class LogIn extends Component {
                     </View>
 
                     <TouchableOpacity style={styles.loginButtonContainer} onPress={() => NavigationActions.quickstart()}>
-                        <Text style={{'color': 'white', 'fontSize': 15}}>LOGIN</Text>
+                        <Text style={{fontFamily: 'Ubuntu-M', color: 'white', fontSize: 15}}>LOGIN</Text>
                     </TouchableOpacity>
                 </View>
 
-                <TouchableOpacity style={{'marginTop': 25}} onPress={() => NavigationActions.forgot()}>
-                    <Text style={{'color': 'white', 'fontSize': 15, 'fontStyle': 'italic'}}>Forgot Password?</Text>
+                <TouchableOpacity style={{marginTop: 25}} onPress={() => NavigationActions.forgot()}>
+                    <Text style={{fontFamily: 'Ubuntu-LI', color: 'white', fontSize: 15}}>Forgot Password?</Text>
                 </TouchableOpacity>
 
                 <TouchableOpacity style={styles.signupContainer} onPress={() => NavigationActions.forgot()}>
-                    <Text style={{'color': '#1961A1', 'fontSize': 15}}>New User?</Text>
+                    <Text style={{fontFamily: 'Ubuntu-M', color: '#1961A1', fontSize: 15}}>New User?</Text>
                 </TouchableOpacity>
             </LinearGradient>
         );

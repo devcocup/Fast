@@ -27,22 +27,23 @@ var styles = StyleSheet.create({
 
     headerTitleText: {
         color: 'white',
+        fontFamily: 'Dreamscape',
         fontSize: 50,
         textAlign: 'center',
         textAlignVertical: 'center',
-        fontWeight: '800',
         marginLeft: 20,
         height: 80
     },
 
     headerDescriptionText: {
         color: 'white',
-        fontSize: 15,
-        fontStyle: 'italic'
+        fontFamily: 'Ubuntu-LI',
+        fontSize: 15
     },
 
     placeHolderTextContainer: {
         position: 'absolute',
+        fontFamily: 'Dreamscape',
         fontSize: 100,
         color: 'rgba(255, 255, 255, 0.2)',
         transform: [{rotate: '-90deg'}],
@@ -84,6 +85,7 @@ var styles = StyleSheet.create({
 
     textInput: {
         flex: 1,
+        fontFamily: 'Nunito-Light',
         marginTop: 10,
         marginRight: 10,
         marginBottom: 10,
