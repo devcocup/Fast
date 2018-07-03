@@ -46,11 +46,29 @@ var styles = StyleSheet.create({
         marginLeft: 20
     },
 
+    phoneNumberContainer: {
+        width: width * 0.6,
+        borderBottomColor: 'white',
+        borderBottomWidth: 1
+    },
+
+    phoneText: {
+        color: 'white',
+        fontFamily: 'Nunito-Light',
+        marginTop: 15,
+    },
+
     textInput: {
         width: width * 0.6,
         color: 'white',
         fontFamily: 'Nunito-Light',
         marginTop: 15,
+        borderBottomWidth: 1,
+        borderBottomColor: 'white'
+    },
+
+    birthDayCotainer: {
+        width: width * 0.6,
         borderBottomWidth: 1,
         borderBottomColor: 'white'
     },

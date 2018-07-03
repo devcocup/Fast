@@ -8,11 +8,20 @@ import {
 } from 'react-native';
 
 import { Actions as NavigationActions } from 'react-native-router-flux';
-import LinearGradient from 'react-native-linear-gradient'
+import LinearGradient from 'react-native-linear-gradient';
+import PhoneInput from 'react-native-phone-input';
+import DatePicker from 'react-native-datepicker';
 
 import styles from './style.js';
 
 class SignUp extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            date: ''
+        }
+    }
+
     render() {
         return (
             <LinearGradient colors={['#1E81CE', '#78B9EB']} style={styles.container}>
@@ -46,6 +55,35 @@ class SignUp extends Component {
                         secureTextEntry={true}
                         underlineColorAndroid='transparent' 
                         style={styles.textInput}/>
+
+                    <View style={styles.phoneNumberContainer}>
+                        <Text style={styles.phoneText}>MOBILE NUMBER</Text>
+                        <PhoneInput initialCountry={'sg'} style={{marginTop: 8, marginBottom: 5}} textStyle={{fontFamily: 'Nunito-Light', color: 'white'}}/>
+                    </View>
+
+                    <DatePicker
+                        style={styles.birthDayCotainer}
+                        date={this.state.date}
+                        placeholder="BIRTHDAY"
+                        format="YYYY-MM-DD"
+                        minDate="1900-01-01"
+                        maxDate="2026-01-01"
+                        showIcon={false}
+                        confirmBtnText="Confirm"
+                        cancelBtnText="Cancel"
+                        customStyles={{
+                            dateInput: {
+                                borderWidth: 0,
+                                alignItems: 'flex-start',
+                                marginTop: 40,
+                                marginBottom: 30
+                            },
+                            placeholderText: { color: 'white', fontFamily: 'Nunito-Light'},
+                            dateText: {color: 'white', fontFamily: 'Nunito-Light'}
+                        // ... You can check the source to find the other keys.
+                        }}
+                        onDateChange={(date) => {this.setState({date: date})}}
+                    />
                 </View>
                 
                 <TouchableOpacity style={styles.doneButton}>
