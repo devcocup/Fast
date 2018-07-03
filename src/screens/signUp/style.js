@@ -9,62 +9,71 @@ const {height, width} = Dimensions.get('window')
 
 var styles = StyleSheet.create({
     container: {
-        flex: 1,
-        alignItems: 'center',
+        flex: 1
     },
 
     backButton: {
-        position: 'absolute',
-        width: 20,
-        height: 16,
-        left: 20,
-        top: 20
+        marginLeft: 20,
+        marginTop: 20
     },
 
-    title: {
-        width: width,
+    headerTitleText: {
         color: 'white',
-        fontSize: 30,
-        textAlign: 'left',
-        marginTop: '20%',
-        marginLeft: '20%'  
+        fontFamily: 'Nunito-Regular',
+        fontSize: 50,
+        marginLeft: 20,
+        marginTop: 20
+    },
+
+    headerDescriptionText: {
+        color: 'white',
+        fontFamily: 'Ubuntu-LI',
+        fontSize: 15
+    },
+
+    placeHolderTextContainer: {
+        position: 'absolute',
+        fontFamily: 'Dreamscape',
+        fontSize: 100,
+        color: 'rgba(255, 255, 255, 0.2)',
+        transform: [{rotate: '-90deg'}],
+        bottom: '22%',
+        right: '-26%'
     },
 
     bodyContainer: {
-        borderRadius: 20,
-        borderWidth: 1,
-        borderColor: 'white',
-        width: width * 0.8,
-        paddingLeft: 20,
-        paddingTop: 10,
-        paddingRight: 30,
-        paddingBottom: 30
+        marginTop: 25,
+        marginLeft: 20
     },
 
     textInput: {
+        width: width * 0.6,
         color: 'white',
-        marginTop: 20,
+        fontFamily: 'Nunito-Light',
+        marginTop: 15,
         borderBottomWidth: 1,
         borderBottomColor: 'white'
     },
 
-    signupButton: {
+    doneButton: {
         backgroundColor: 'white',
-        width: width * 0.8,
+        width: width * 0.7,
         height: 45,
         alignItems: 'center',
         justifyContent: 'center',
         borderRadius: 20,
-        marginTop: 20
+        marginTop: 35,
+        marginLeft: 20
     },
 
     policyText: {
         width: width * 0.8,
         color: 'white',
+        fontFamily: 'Ubuntu-RI',
         fontSize: 13,
-        fontStyle: 'italic',
-        textAlign: 'center',
-        marginTop: '20%'
+        marginTop: 20,
+        marginLeft: 20,
+        textAlign: 'center'
     }
 });
 

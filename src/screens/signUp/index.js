@@ -15,24 +15,23 @@ import styles from './style.js';
 class SignUp extends Component {
     render() {
         return (
-            <LinearGradient colors={['#36D1DC', '#185A9D']} style={styles.container}>
+            <LinearGradient colors={['#1E81CE', '#78B9EB']} style={styles.container}>
+
+                <Text style={styles.placeHolderTextContainer}>FAST</Text>
+
                 <TouchableOpacity style={styles.backButton} onPress={() => NavigationActions.pop()}>
-                    <Image source={require('../../assets/images/back.png')}/>
+                    <Image source={require('../../assets/images/back_icon.png')} style={{resizeMode: 'contain'}}/>
                 </TouchableOpacity>
-                <Text style={styles.title}>New</Text>
+
+                <Text style={styles.headerTitleText}>REGISTER</Text>
 
                 <View style={styles.bodyContainer}>
                     <TextInput
-                        placeholder='FIRST NAME'
+                        placeholder='USERNAME'
                         placeholderTextColor='white'
                         underlineColorAndroid='transparent' 
                         style={styles.textInput}/>
-                        
-                    <TextInput
-                        placeholder='LAST NAME'
-                        placeholderTextColor='white'
-                        underlineColorAndroid='transparent' 
-                        style={styles.textInput}/>
+                
 
                     <TextInput
                         placeholder='EMAIL'
@@ -49,8 +48,8 @@ class SignUp extends Component {
                         style={styles.textInput}/>
                 </View>
                 
-                <TouchableOpacity style={styles.signupButton}>
-                    <Text style={{'color': '#1961A1', 'fontSize': 15}}>Sign Up</Text>
+                <TouchableOpacity style={styles.doneButton}>
+                    <Text style={{fontFamily: 'Ubuntu-M', color: '#1961A1', fontSize: 15}}>Done</Text>
                 </TouchableOpacity>
 
                 <Text style={styles.policyText}>By creating an account you are agreeing to FAST's User Agreement</Text>

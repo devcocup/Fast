@@ -57,7 +57,7 @@ class LogIn extends Component {
                     <Text style={{fontFamily: 'Ubuntu-LI', color: 'white', fontSize: 15}}>Forgot Password?</Text>
                 </TouchableOpacity>
 
-                <TouchableOpacity style={styles.signupContainer} onPress={() => NavigationActions.forgot()}>
+                <TouchableOpacity style={styles.signupContainer} onPress={() => NavigationActions.signup()}>
                     <Text style={{fontFamily: 'Ubuntu-M', color: '#1961A1', fontSize: 15}}>New User?</Text>
                 </TouchableOpacity>
             </LinearGradient>

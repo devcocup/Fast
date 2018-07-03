@@ -16,7 +16,7 @@ import {
 } from 'react-native-router-flux';
 
 
-// import SignUp from './src/screens/signUp/index';
+import SignUp from './src/screens/signUp/index';
 import LogIn from './src/screens/logIn/index';
 import ForgotPassword from './src/screens/forgot/index';
 // import QuickStart from './src/screens/quickStart/index';
@@ -49,7 +49,7 @@ export default class App extends Component {
       <Router>
         <Scene key="root">
           <Scene initial key="login" hideNavBar component={LogIn}/>
-          {/* <Scene key="signup" hideNavBar component={SignUp}/> */}
+          <Scene key="signup" hideNavBar component={SignUp}/>
           <Scene key="forgot" hideNavBar component={ForgotPassword}/>
           {/* <Scene key="quickstart" hideNavBar component={QuickStart}/> */}
           {/* <Drawer key="menu" hideNavBar drawerImage={require('./src/assets/images/menu_icon.png')} contentComponent={SideMenu} navTransparent={true}>
