@@ -15,8 +15,6 @@ var styles = StyleSheet.create({
 
     backButton: {
         position: 'absolute',
-        width: 20,
-        height: 16,
         left: 20,
         top: 20
     },
@@ -33,25 +31,36 @@ var styles = StyleSheet.create({
         resizeMode: 'contain'
     },
 
-    headerText: {
+    headerTitleText: {
         color: 'white',
+        fontFamily: 'Dreamscape',
         fontSize: 50,
         textAlign: 'center',
         textAlignVertical: 'center',
-        fontWeight: '800',
         marginLeft: 20,
         height: 80
     },
 
-    bodyText: {
+    headerDescriptionText: {
         color: 'white',
-        fontSize: 15,
-        fontStyle: 'italic'
+        fontFamily: 'Ubuntu-LI',
+        fontSize: 15
+    },
+
+    placeHolderTextContainer: {
+        position: 'absolute',
+        fontFamily: 'Dreamscape',
+        fontSize: 100,
+        color: 'rgba(255, 255, 255, 0.2)',
+        transform: [{rotate: '-90deg'}],
+        bottom: '22%',
+        right: '-26%'
     },
 
     noticeText: {
-        width: width * 0.6,
+        width: width * 0.8,
         color: 'white',
+        fontFamily: 'Nunito-Regular',
         fontSize: 14,
         marginTop: '25%',
         textAlign: 'center'
@@ -60,6 +69,7 @@ var styles = StyleSheet.create({
     textInput: {
         width: width * 0.6,
         color: 'white',
+        fontFamily: 'Nunito-Light',
         marginTop: 35,
         borderBottomWidth: 1,
         borderBottomColor: 'white'

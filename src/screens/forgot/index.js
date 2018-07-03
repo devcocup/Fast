@@ -15,19 +15,21 @@ import styles from './style.js';
 class ForgotPassword extends Component {
     render() {
         return (
-            <LinearGradient colors={['#36D1DC', '#185A9D']} style={styles.container}>
+            <LinearGradient colors={['#1E81CE', '#78B9EB']} style={styles.container}>
                 <TouchableOpacity style={styles.backButton} onPress={() => NavigationActions.pop()}>
-                    <Image source={require('../../assets/images/back.png')}/>
+                    <Image source={require('../../assets/images/back_icon.png')} style={{resizeMode: 'contain'}}/>
                 </TouchableOpacity>
 
                 <View style={styles.headerContainer}>
-                    <Image source={require('../../assets/images/logo.png')} style={styles.headerImage}/>
-                    <Text style={styles.headerText}>FAST</Text>
+                    <Image source={require('../../assets/images/login_logo.png')} style={styles.headerImage}/>
+                    <Text style={styles.headerTitleText}>FAST</Text>
                 </View>
 
-                <Text style={styles.bodyText}>Let's Pay and Queue with FAST.</Text>
+                <Text style={styles.headerDescriptionText}>Let's Pay and Queue with FAST.</Text>
+
+                <Text style={styles.placeHolderTextContainer}>FAST</Text>
                 
-                <Text style={styles.noticeText}>We will send you a email for password reset. Please check your</Text>
+                <Text style={styles.noticeText}>We will send you a email for password reset. Please check your email</Text>
 
                 <TextInput
                     placeholder='EMAIL'
@@ -37,7 +39,7 @@ class ForgotPassword extends Component {
                     style={styles.textInput}/>
                 
                 <TouchableOpacity style={styles.sendButton} onPress={() => {}}>
-                    <Text style={{'color': '#1961A1', 'fontSize': 15}}>SEND</Text>
+                    <Text style={{fontFamily: 'Ubuntu-M', color: '#1961A1', fontSize: 15}}>SEND</Text>
                 </TouchableOpacity>
             </LinearGradient>
         );
