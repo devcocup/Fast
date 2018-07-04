@@ -19,7 +19,7 @@ class Home extends Component {
     render() {
         return (
             <ScrollView style={styles.container}>
-                <View style={styles.headerContainer}>
+                {/* <View style={styles.headerContainer}>
                     <TouchableOpacity>
                         <Image source={require('../../assets/images/menu_icon.png')} style={styles.menuButton}/>
                     </TouchableOpacity>
@@ -116,7 +116,7 @@ class Home extends Component {
                             )
                         })
                     }
-                </View>
+                </View> */}
             </ScrollView>
         );
     }

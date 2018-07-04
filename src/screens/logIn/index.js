@@ -48,7 +48,7 @@ class LogIn extends Component {
                             style={styles.textInput}/>
                     </View>
 
-                    <TouchableOpacity style={styles.loginButtonContainer} onPress={() => NavigationActions.quickstart()}>
+                    <TouchableOpacity style={styles.loginButtonContainer} onPress={() => NavigationActions.home()}>
                         <Text style={{fontFamily: 'Ubuntu-M', color: 'white', fontSize: 15}}>LOGIN</Text>
                     </TouchableOpacity>
                 </View>

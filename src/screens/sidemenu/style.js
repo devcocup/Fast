@@ -10,45 +10,46 @@ const {height, width} = Dimensions.get('window')
 var styles = StyleSheet.create({
     container: {
         flex: 1,
-        // marginTop: height * 0.07,
-        // marginBottom: height * 0.07,
-        // borderTopRightRadius: 20,
-        // borderBottomRightRadius: 20,
-        // height: height * 0.85
-    },
-
-    menuButton: {
-        position: 'absolute',
-        width: 20,
-        height: 15,
-        right: 10,
-        top: 10
+        height: height * 0.7,
+        marginTop: 20,
+        marginBottom: 20,
+        borderTopRightRadius: 20,
+        borderBottomRightRadius: 20,
     },
 
     headerContainer: {
         flexDirection: 'column',
-        marginTop: '30%'
+        borderTopRightRadius: 20
     },
 
-    headerImage: {
-        height: 35,
-    },
+    menuButton: {
+        position: 'absolute',
+        right: 10,
+        top: 10
+    },    
 
     profileImage: {
-        position: 'absolute',
         width: 65,
         height: 65,
         borderRadius: 10,
         resizeMode: 'cover',
-        left: 20,
-        top: -40
+        marginLeft: 20,
+        marginTop: '20%'
+    },
+
+    headerImage: {
+        height: 50,
+        marginTop: '15%',
+        marginLeft: -20,
+        paddingLeft: 20
     },
 
     headerText: {
         color: 'white',
-        fontWeight: 'bold',
+        fontFamily: 'Ubuntu-R',
         fontSize: 24,
-        marginLeft: 20
+        marginLeft: 20,
+        marginTop: '-5%'
     },
 
     rewardContainer: {
@@ -58,25 +59,20 @@ var styles = StyleSheet.create({
     },
 
     menuItems: {
-        marginTop: 30,
+        marginTop: 25,
         marginLeft: 20
     },
 
     menuItemContainer: {
         flexDirection: 'row',
-        marginTop: 10
-    },
-
-    menuItemImage: {
-        width: 20,
-        height: 20,
-        resizeMode: 'contain'
+        marginTop: 20
     },
 
     menuItemText: {
-        color: 'white',
-        fontSize: 18,
-        marginLeft: 10
+        color: '#393939',
+        fontFamily: 'Ubuntu-R',
+        fontSize: 15,
+        marginLeft: 20
     },
 
     footer: {
