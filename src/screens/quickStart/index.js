@@ -38,15 +38,15 @@ class QuickStart extends Component {
     }
 
     next() {
-        NavigationActions.home();
-        // if (this.state.activeSlide < 3) {
-        //     this.setState({
-        //         activeSlide: this.state.activeSlide + 1
-        //     })
-        //     this.carousel.snapToNext()
-        // } else {
-        //     NavigationActions.home();
-        // }
+        // NavigationActions.home();
+        if (this.state.activeSlide < 3) {
+            this.setState({
+                activeSlide: this.state.activeSlide + 1
+            })
+            this.carousel.snapToNext()
+        } else {
+            NavigationActions.home();
+        }
     }
 
     _renderItem ({item, index}) {

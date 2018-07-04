@@ -52,7 +52,7 @@ class Verify extends Component {
                         style={styles.textInput}/>
                 </View>
                 
-                <TouchableOpacity style={styles.verifyContainer}>
+                <TouchableOpacity style={styles.verifyContainer} onPress={() => NavigationActions.quickstart()}>
                     <Text style={{fontFamily: 'Ubuntu-M', color: '#1961A1', fontSize: 15, height: 45, textAlign: 'center', textAlignVertical: 'center'}}>VERIFY</Text>
                 </TouchableOpacity>
 
