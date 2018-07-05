@@ -9,8 +9,6 @@ import {
 
 import { Actions as NavigationActions } from 'react-native-router-flux';
 import LinearGradient from 'react-native-linear-gradient';
-import PhoneInput from 'react-native-phone-input';
-import DatePicker from 'react-native-datepicker';
 
 import styles from './style.js';
 

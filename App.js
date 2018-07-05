@@ -5,9 +5,7 @@
  */
 
 import React, { Component } from 'react';
-import {
-  Image
-} from 'react-native';
+import { Image } from 'react-native';
 
 import {
   Scene,
@@ -24,24 +22,39 @@ import QuickStart from './src/screens/quickStart/index';
 import Home from './src/screens/home/index';
 import SideMenu from './src/screens/sidemenu/index';
 import Queue from './src/screens/queue/index';
-import Order from './src/screens/order/index';
-import Notification from './src/screens/notification/index';
+import Scan from './src/screens/scan/index';
+import Bill from './src/screens/bill/index';
 import NearBy from './src/screens/nearby/index';
 
-// const HomeIcon = require('./src/assets/images/home_icon.png')
-// const QueueIcon = require('./src/assets/images/queue_icon.png')
-// const OrderIcon = require('./src/assets/images/order_icon.png')
-// const NotificationIcon = require('./src/assets/images/notification_icon.png')
-// const NearByIcon = require('./src/assets/images/nearby_icon.png')
+import images from './src/Lib/Images';
+
+const { TabIcons } = images;
 
 class TabIcon extends Component {
-  render () {
-    var color = this.props.selected ? '#36D1DC' : '#5A6E82';
+  render() {
+    var icon = TabIcons.HomeIcon
+    switch (this.props.iconName) {
+      case 'home':
+        icon = this.props.focused ? TabIcons.HomeSelectedIcon : TabIcons.HomeIcon
+        break
+      case 'scan':
+        icon = this.props.focused ? TabIcons.ScanSelectedIcon : TabIcons.ScanIcon
+        break
+      case 'queue':
+        icon = this.props.focused ? TabIcons.QueueSelectedIcon : TabIcons.QueueIcon
+        break
+      case 'bill':
+        icon = this.props.focused ? TabIcons.BillSelectedIcon : TabIcons.BillIcon
+        break
+      default:
+        icon = this.props.focused ? TabIcons.NearBySelectedIcon : TabIcons.NearByIcon
+    }
 
-    return(
-      <Image source={this.props.iconName} style={{width: 20, height: 20}}/>
+    return (
+      <Image source={icon}/>
     )
   }
+  
 }
 
 export default class App extends Component {
@@ -59,14 +72,13 @@ export default class App extends Component {
             hideNavBar 
             drawerImage={require('./src/assets/images/menu_icon_blue.png')} 
             contentComponent={SideMenu} 
-            openDrawerOffset={0.2}
           >
-            <Scene key="tabs" tabs={true} tabBarPosition='bottom' activeTintColor={'#185A9D'} inactiveTintColor={'#5A6E82'}>
-              <Scene key="home" title="Home" hideNavBar component={Home}/>
-              <Scene key="queue" title="Queue" hideNavBar component={Queue}/>
-              <Scene key="order" title="Order" hideNavBar component={Order}/>
-              <Scene key="notification" title="Notification" hideNavBar component={Notification}/>
-              <Scene key="nearby" title="NearBy" hideNavBar component={NearBy} icon={TabIcon}/>
+            <Scene key="tabs" tabs={true} tabBarPosition='bottom' activeTintColor="#1F81CE">
+              <Scene key="home" title="Home" hideNavBar component={Home} icon={TabIcon} iconName="home"/>
+              <Scene key="scan" title="Scan" hideNavBar component={Scan} icon={TabIcon} iconName="scan"/>
+              <Scene key="queue" title="Queue" hideNavBar component={Queue} icon={TabIcon} iconName="queue"/>
+              <Scene key="bill" title="Bill" hideNavBar component={Bill} icon={TabIcon} iconName="bill"/>
+              <Scene key="nearby" title="NearBy" hideNavBar component={NearBy} icon={TabIcon} iconName="nearby"/>
             </Scene>
           </Drawer>
         </Scene>

@@ -4,18 +4,16 @@ import {
     View
 } from 'react-native';
 
-import styles from './style.js';
-
-class Home extends Component {
+class Scan extends Component {
     render() {
         return (
-            <View style={styles.container}>
+            <View>
                 <Text>
-                    Home SCREEN
+                    Scan SCREEN
                 </Text>
             </View>
         );
     }
 }
 
-export default Home;
+export default Scan;

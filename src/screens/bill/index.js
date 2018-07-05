@@ -4,18 +4,16 @@ import {
     View
 } from 'react-native';
 
-import styles from './style.js';
-
-class Home extends Component {
+class Bill extends Component {
     render() {
         return (
-            <View style={styles.container}>
+            <View>
                 <Text>
-                    Home SCREEN
+                    Bill SCREEN
                 </Text>
             </View>
         );
     }
 }
 
-export default Home;
+export default Bill;

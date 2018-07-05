@@ -10,16 +10,10 @@ const {height, width} = Dimensions.get('window')
 var styles = StyleSheet.create({
     container: {
         flex: 1,
-        height: height * 0.7,
-        marginTop: 20,
-        marginBottom: 20,
-        borderTopRightRadius: 20,
-        borderBottomRightRadius: 20,
     },
 
     headerContainer: {
         flexDirection: 'column',
-        borderTopRightRadius: 20
     },
 
     menuButton: {

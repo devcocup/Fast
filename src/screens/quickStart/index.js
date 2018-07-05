@@ -15,7 +15,7 @@ import QuickStartCard from './QuickStartCard';
 
 import styles from './style.js';
 
-const {height, width} = Dimensions.get('window')
+const { width } = Dimensions.get('window')
 const { GetStartEnties } = Constants
 
 class QuickStart extends Component {
