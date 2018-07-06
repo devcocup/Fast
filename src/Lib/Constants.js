@@ -29,24 +29,38 @@ const GetStartEnties = [
     }
 ]
 
-const DailyDeals = [
+const Promotions = [
     {
-        // image: require('../assets/images/daily_deal_1.png'),
-        title: 'Subway $6.50 Promotion',
-        description: 'Valid from 1st June to 30th August 2018*. Available all on outlets!',
-        count: 1000
+        image: require('../assets/images/home_ongoing_first.png'),
+        title: 'Subway Buy 1 Get 1 Free Promotion',
+        descriptions: ['Valid from 1st June to 30th August 2018*.', 'Available all on outlets!']
     },
     {
-        // image: require('../assets/images/daily_deal_2.png'),
-        title: 'Standard Chartered 1-for-1 Handroll @ Sakae Sushi',
-        description: 'Valid from 1st June to 30th August 2018*. Available all on outlets! Terms and Conditions*',
-        count: 850
+        image: require('../assets/images/home_ongoing_second.png'),
+        title: 'Crystal Jade $8.80 Lunch Set',
+        descriptions: ['Valid from 1st June to 30th August 2018*.', 'Available all on outlets!']
+    }
+]
+
+const Suggestions = [
+    {
+        image: require('../assets/images/home_suggestion_first.png'),
+        title: 'Sushi Palace',
+        category: 'Japanese Cuisine',
+        location: '200m, Tampines Mall'
+    },
+    {
+        image: require('../assets/images/home_suggestion_second.png'),
+        title: 'Crystal Jade Kitchen',
+        category: 'Chinese Cuisine',
+        location: '200m, Tampines Mall'
     }
 ]
 
 const Constants = {
     GetStartEnties,
-    DailyDeals
+    Promotions,
+    Suggestions
 }
 
 export default Constants

@@ -8,7 +8,12 @@ import {
     Image
 } from 'react-native';
 
+import PromotionCard from './PromotionCard';
+import SuggestionCard from './SuggestionCard';
+import Constants from '../../Lib/Constants';
 import styles from './style.js';
+
+const { Promotions, Suggestions } = Constants
 
 class Home extends Component {
 
@@ -16,8 +21,14 @@ class Home extends Component {
         super(props);
 
         this.state = {
-            is_open: true
+            is_open: false
         }
+    }
+
+    openSubCategory() {
+        this.setState({
+            is_open: !this.state.is_open
+        })
     }
 
     render() {
@@ -85,12 +96,81 @@ class Home extends Component {
                             </ImageBackground>
                         </TouchableOpacity>
 
-                        <TouchableOpacity style={styles.categoryButton}>
+                        <TouchableOpacity style={styles.categoryButton} onPress={() => this.openSubCategory()}>
                             <ImageBackground source={require('../../assets/images/home_food_category.png')} style={styles.categoryImage}>
                                 <Text style={styles.categoryText}>Food Category</Text>
                             </ImageBackground>
                         </TouchableOpacity>
                     </ScrollView>
+
+                    {
+                        this.state.is_open && (
+                            <View style={styles.subCategorysContainer}>
+                                <TouchableOpacity style={styles.subCategoryContainer}>
+                                    <Image source={require('../../assets/images/home_chinese.png')} style={styles.subCategoryImage} borderRadius={10}/>
+                                    <Text style={styles.subCategoryText}>Chinese</Text>
+                                </TouchableOpacity>
+
+                                <TouchableOpacity style={styles.subCategoryContainer}>
+                                    <Image source={require('../../assets/images/home_western.png')} style={styles.subCategoryImage} borderRadius={10}/>
+                                    <Text style={styles.subCategoryText}>Western</Text>
+                                </TouchableOpacity>
+
+                                <TouchableOpacity style={styles.subCategoryContainer}>
+                                    <Image source={require('../../assets/images/home_muslim.png')} style={styles.subCategoryImage} borderRadius={10}/>
+                                    <Text style={styles.subCategoryText}>Muslim</Text>
+                                </TouchableOpacity>
+
+                                <TouchableOpacity style={styles.subCategoryContainer}>
+                                    <Image source={require('../../assets/images/home_japanese.png')} style={styles.subCategoryImage} borderRadius={10}/>
+                                    <Text style={styles.subCategoryText}>Japanese</Text>
+                                </TouchableOpacity>
+
+                                <TouchableOpacity style={styles.subCategoryContainer}>
+                                    <Image source={require('../../assets/images/home_indian.png')} style={styles.subCategoryImage} borderRadius={10}/>
+                                    <Text style={styles.subCategoryText}>Indian</Text>
+                                </TouchableOpacity>
+                            </View>
+                        )
+                    }
+
+                    <View style={{marginTop: 30}}>
+                        <View style={styles.modalHeader}>
+                            <Text style={styles.modalHeaderTitleText}>Ongoing Promotion</Text>
+                            <TouchableOpacity>
+                                <Text style={styles.moreText}>More ></Text>
+                            </TouchableOpacity>
+                        </View>
+
+                        <ScrollView horizontal={true} style={{marginTop: 10}}>
+                            {
+                                Promotions.map((promotion, index) => {
+                                    return (
+                                        <PromotionCard key={index * 10 + 1} content={promotion}/>
+                                    )
+                                })
+                            }
+                        </ScrollView>
+                    </View>
+
+                    <View style={{marginTop: 30}}>
+                        <View style={styles.modalHeader}>
+                            <Text style={styles.modalHeaderTitleText}>Ongoing Promotion</Text>
+                            <TouchableOpacity>
+                                <Text style={styles.moreText}>More ></Text>
+                            </TouchableOpacity>
+                        </View>
+
+                        <ScrollView horizontal={true} style={{marginTop: 10, marginBottom: 20}}>
+                            {
+                                Suggestions.map((suggestion, index) => {
+                                    return (
+                                        <SuggestionCard key={index * 100 + 2} content={suggestion}/>
+                                    )
+                                })
+                            }
+                        </ScrollView>
+                    </View>
                 </ScrollView>
             </View>
         );

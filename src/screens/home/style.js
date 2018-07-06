@@ -10,6 +10,7 @@ const {height, width} = Dimensions.get('window')
 var styles = StyleSheet.create({
     container: {
         flex: 1,
+        backgroundColor: 'red'
     },
 
     navigationBarContainer: {
@@ -86,12 +87,14 @@ var styles = StyleSheet.create({
 
     categoryContainer: {
         marginTop: 30,
-        marginLeft: 10
+        paddingRight: 20
     },
 
     categoryButton: {
         borderRadius: 10,
-        padding: 10,
+        paddingTop: 10,
+        paddingBottom: 10,
+        paddingLeft: 20,
     },
 
     categoryImage: {
@@ -106,6 +109,45 @@ var styles = StyleSheet.create({
         fontFamily: 'Ubuntu-M',
         fontSize: 20,
         color: 'white'
+    },
+
+    subCategorysContainer: {
+        flexDirection: 'row',
+        marginLeft: 20
+    },
+
+    subCategoryContainer: {
+        alignItems: 'center',
+        marginRight: 'auto'
+    },
+
+    subCategoryImage: {
+        width: 50,
+        height: 50,
+        resizeMode: 'cover',
+    },
+
+    subCategoryText: {
+        fontFamily: 'Ubuntu-M',
+        fontSize: 12
+    },
+
+    modalHeader: {
+        flexDirection: 'row'
+    },
+
+    modalHeaderTitleText: {
+        fontFamily: 'Ubuntu-M',
+        fontSize: 15,
+        marginLeft: 20,
+        marginRight: 'auto'
+    },
+
+    moreText: {
+        fontFamily: 'Ubuntu-M',
+        fontSize: 10,
+        color: '#2578DB',
+        marginRight: 20
     }
 
 });
