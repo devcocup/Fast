@@ -10,7 +10,7 @@ const {height, width} = Dimensions.get('window')
 var styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: 'red'
+        backgroundColor: '#FBFBFB'
     },
 
     navigationBarContainer: {
@@ -65,19 +65,25 @@ var styles = StyleSheet.create({
     },
 
     ePaymentContainer: {
-        marginTop: 30,
-        paddingLeft: 20
+        marginTop: 50,
+        marginLeft: 20,
+        marginRight: 20,
+        paddingLeft: 20,
+        paddingBottom: 20,
+        backgroundColor: 'white',
+        borderRadius: 10
     },
 
     ePaymentText: {
-        padding: 10,
+        paddingTop: 10,
+        paddingRight: 10,
+        paddingBottom: 10,
         fontFamily: 'Ubuntu-M',
         fontSize: 15
     },
 
     ePaymentButtons: {
         flexDirection: 'row',
-        marginLeft: 10
     },
 
     ePaymentButton: {
@@ -86,14 +92,15 @@ var styles = StyleSheet.create({
     },
 
     categoryContainer: {
-        marginTop: 30,
+        backgroundColor: 'white',
+        marginTop: 20,
         paddingRight: 20
     },
 
     categoryButton: {
         borderRadius: 10,
-        paddingTop: 10,
-        paddingBottom: 10,
+        paddingTop: 20,
+        paddingBottom: 20,
         paddingLeft: 20,
     },
 
