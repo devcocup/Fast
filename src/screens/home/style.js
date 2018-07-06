@@ -12,82 +12,102 @@ var styles = StyleSheet.create({
         flex: 1,
     },
 
-    headerContainer: {
+    navigationBarContainer: {
         flexDirection: 'row',
-        marginTop: 20,
-        paddingLeft: 20,
-        paddingRight: 20
+        alignItems: 'center',
+        height: 50
     },
 
     menuButton: {
-        width: 20,
-        height: 15,
-        resizeMode: 'contain'
-    },
-
-    headerText: {
-        flex: 1,
-        color: '#6A6A6A',
-        fontSize: 13,
         marginLeft: 20
     },
 
-    searchButton: {
-        width: 20,
-        height: 20,
-        resizeMode: 'contain'
+    profileButton: {
+        marginRight: 20
     },
 
-    bodyContainer: {
-        margin: 20,
-        borderBottomLeftRadius: 10,
-        borderBottomRightRadius: 10
+    emailButton: {
+        marginRight: 20,
     },
 
-    topContainer: {
-        flexDirection: 'row'
+    headerContainer: {
+        width: width,
+        height: 200
     },
 
-    weatherImage: {
-        marginLeft: 10,
-        width: 70,
-        height: 70,
-        resizeMode: 'contain'
-    },
-
-    countryText: {
-        fontSize: 10,
-        textAlign: 'center'
-    },
-
-    timeContainer: {
+    headerButtonsContainer: {
         flex: 1,
+        flexDirection: 'row',
+        marginLeft: 10,
+        marginRight: 10,
+        marginTop: 140
     },
 
-    timeText: {
-        fontSize: 32,
-        fontWeight: 'bold',
-        textAlign: 'center'
+    headerButton: {
+        flex: 1,
+        height: 80,
+        backgroundColor: 'white',
+        borderRadius: 10,
+        margin: 10,
+        alignItems: 'center',
+        justifyContent: 'center'
     },
 
-    bodyText: {
-        color: 'white',
-        fontSize: 15,
-        fontStyle: 'italic'
+    headerButtonImage: {
+        margin: 10
     },
 
-    // bodyContainer: {
-    //     width: width * 0.6,
-    //     marginTop: '20%'
-    // },
+    headerButtonText: {
+        fontFamily: 'Ubuntu-M',
+        fontSize: 11,
+        marginBottom: 5
+    },
 
-    textInput: {
-        // width: width * 0.6,
-        color: 'white',
-        marginTop: 20,
-        borderBottomWidth: 1,
-        borderBottomColor: 'white'
+    ePaymentContainer: {
+        marginTop: 30,
+        paddingLeft: 20
+    },
+
+    ePaymentText: {
+        padding: 10,
+        fontFamily: 'Ubuntu-M',
+        fontSize: 15
+    },
+
+    ePaymentButtons: {
+        flexDirection: 'row',
+        marginLeft: 10
+    },
+
+    ePaymentButton: {
+        borderRadius: 10,
+        marginRight: 20
+    },
+
+    categoryContainer: {
+        marginTop: 30,
+        marginLeft: 10
+    },
+
+    categoryButton: {
+        borderRadius: 10,
+        padding: 10,
+    },
+
+    categoryImage: {
+        padding: 10,
+        width: 135,
+        height: 90,
+        flexDirection: 'column',
+        justifyContent: 'flex-end'  
+    },
+
+    categoryText: {
+        fontFamily: 'Ubuntu-M',
+        fontSize: 20,
+        color: 'white'
     }
+
 });
 
 export default styles;
