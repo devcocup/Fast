@@ -9,8 +9,7 @@ const {height, width} = Dimensions.get('window')
 
 var styles = StyleSheet.create({
     container: {
-        flex: 1,
-        backgroundColor: '#FBFBFB'
+        flex: 1
     },
 
     navigationBarContainer: {

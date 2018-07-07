@@ -25,6 +25,7 @@ import Queue from './src/screens/queue/index';
 import Scan from './src/screens/scan/index';
 import Bill from './src/screens/bill/index';
 import NearBy from './src/screens/nearby/index';
+import Profile from './src/screens/profile/index';
 
 import images from './src/Lib/Images';
 
@@ -80,6 +81,8 @@ export default class App extends Component {
               <Scene key="bill" title="Bill" hideNavBar component={Bill} icon={TabIcon} iconName="bill"/>
               <Scene key="nearby" title="NearBy" hideNavBar component={NearBy} icon={TabIcon} iconName="nearby"/>
             </Scene>
+
+            <Scene key="profile" title="Profile" hideNavBar component={Profile} />
           </Drawer>
         </Scene>
       </Router>

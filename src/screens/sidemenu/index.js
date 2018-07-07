@@ -24,7 +24,7 @@ class SideMenu extends Component {
                     <View style={styles.headerContainer}>
                         <Image source={require('../../assets/images/profile.jpg')} style={styles.profileImage}/>
                         <ImageBackground source={require('../../assets/images/menu_header.png')} style={styles.headerImage}>
-                            <Text style={styles.headerText}>Carrie Wong</Text>
+                            <Text style={styles.headerText}>carriewong</Text>
                             <View style={styles.rewardContainer}>
                                 <Image source={require('../../assets/images/menu_gold_icon.png')} style={{marginLeft: 20, width: 18, height: 18}}/>
                                 <Text style={{color: 'white', fontSize: 13, marginLeft: 10}}>500</Text>
@@ -34,7 +34,7 @@ class SideMenu extends Component {
                 </LinearGradient>
 
                 <View style={styles.menuItems}>
-                    <TouchableOpacity style={styles.menuItemContainer} onPress={() => {}}>
+                    <TouchableOpacity style={styles.menuItemContainer} onPress={() => NavigationActions.profile()}>
                         <Image source={require('../../assets/images/menu_profile_icon.png')}/>
                         <Text style={styles.menuItemText}>Profile</Text>
                     </TouchableOpacity>

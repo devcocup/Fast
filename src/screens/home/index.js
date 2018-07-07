@@ -8,6 +8,8 @@ import {
     Image
 } from 'react-native';
 
+import { Actions as NavigationAction } from 'react-native-router-flux';
+
 import PromotionCard from './PromotionCard';
 import SuggestionCard from './SuggestionCard';
 import Constants from '../../Lib/Constants';
@@ -36,7 +38,7 @@ class Home extends Component {
             <View style={styles.container}>
                 <ScrollView>
                     <View style={styles.navigationBarContainer}>
-                        <TouchableOpacity style={styles.menuButton}>
+                        <TouchableOpacity style={styles.menuButton} onPress={() => NavigationAction.drawerOpen()}>
                             <Image source={require('../../assets/images/menu_icon_blue.png')} />
                         </TouchableOpacity>
 
