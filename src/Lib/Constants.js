@@ -57,10 +57,28 @@ const Suggestions = [
     }
 ]
 
+const Followings = [
+    {
+        image: require('../assets/images/home_suggestion_second.png'),
+        title: 'Crystal Jade Kitchen',
+        location: 'Tampines Mall, #03-10',
+        category: 'Chinese Cuisine',
+        like: true
+    },
+    {
+        image: require('../assets/images/home_suggestion_first.png'),
+        title: 'Sushi Palace',
+        location: 'Tampines Mall, #03-15',
+        category: 'Japanese Cuisine',
+        like: true
+    }
+]
+
 const Constants = {
     GetStartEnties,
     Promotions,
-    Suggestions
+    Suggestions,
+    Followings
 }
 
 export default Constants

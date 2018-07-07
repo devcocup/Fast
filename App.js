@@ -27,6 +27,7 @@ import Bill from './src/screens/bill/index';
 import NearBy from './src/screens/nearby/index';
 import Profile from './src/screens/profile/index';
 import EditProfile from './src/screens/editProfile/index';
+import Following from './src/screens/following/index';
 
 import images from './src/Lib/Images';
 
@@ -85,6 +86,7 @@ export default class App extends Component {
 
             <Scene key="profile" title="Profile" hideNavBar component={Profile} />
             <Scene key="editProfile" title="Edit Profile" hideNavBar component={EditProfile} />
+            <Scene key="following" title="Following" hideNavBar component={Following} />
           </Drawer>
         </Scene>
       </Router>
