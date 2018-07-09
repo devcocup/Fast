@@ -90,5 +90,7 @@
 		<string>Dreamscape Sans.ttf</string>
 		<string>Dreamscape.ttf</string>
 	</array>
+	<key>NSCameraUsageDescription</key>
+	<string>FAST App need to access to camera.</string>
 </dict>
 </plist>

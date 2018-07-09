@@ -55,7 +55,7 @@ class Home extends Component {
 
                     <ImageBackground source={require('../../assets/images/home_header_image.png')} style={styles.headerContainer}>
                         <View style={styles.headerButtonsContainer}>
-                            <TouchableOpacity style={styles.headerButton}>
+                            <TouchableOpacity style={styles.headerButton} onPress={() => NavigationAction.scan()}>
                                 <Image source={require('../../assets/images/home_scan.png')} style={styles.headerButtonImage}/>
                                 <Text style={styles.headerButtonText}>Scan</Text>
                             </TouchableOpacity>

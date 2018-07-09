@@ -10,56 +10,28 @@ const {height, width} = Dimensions.get('window')
 var styles = StyleSheet.create({
     container: {
         flex: 1,
-        alignItems: 'center',
+        backgroundColor: 'transparent',
+        alignItems: 'center'
     },
 
-    backButton: {
+    buttonsContainer: {
         position: 'absolute',
-        width: 20,
-        height: 16,
-        left: 20,
-        top: 20
-    },
-
-    headerContainer: {
         flexDirection: 'row',
+        bottom: 30
+    },
+
+    buttonContainer: {
+        width: 150,
+        height: 50,
+        borderRadius: 10,
+        alignItems: 'center',
         justifyContent: 'center',
-        marginTop: "20%",
+        margin: 10
     },
 
-    headerImage: {
-        width: 60,
-        height: 90,
-        resizeMode: 'contain'
-    },
-
-    headerText: {
-        color: 'white',
-        fontSize: 50,
-        textAlign: 'center',
-        textAlignVertical: 'center',
-        fontWeight: '800',
-        marginLeft: 20,
-        height: 80
-    },
-
-    bodyText: {
-        color: 'white',
-        fontSize: 15,
-        fontStyle: 'italic'
-    },
-
-    bodyContainer: {
-        width: width * 0.6,
-        marginTop: '20%'
-    },
-
-    textInput: {
-        // width: width * 0.6,
-        color: 'white',
-        marginTop: 20,
-        borderBottomWidth: 1,
-        borderBottomColor: 'white'
+    buttonText: {
+        fontFamily: 'Ubuntu-M',
+        fontSize: 15
     }
 });
 
