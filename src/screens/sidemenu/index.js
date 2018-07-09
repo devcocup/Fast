@@ -39,7 +39,7 @@ class SideMenu extends Component {
                         <Text style={styles.menuItemText}>Profile</Text>
                     </TouchableOpacity>
 
-                    <TouchableOpacity style={styles.menuItemContainer} onPress={() => {}}>
+                    <TouchableOpacity style={styles.menuItemContainer} onPress={() => NavigationActions.orderHistory()}>
                         <Image source={require('../../assets/images/menu_order_history_icon.png')}/>
                         <Text style={styles.menuItemText}>Order History</Text>
                     </TouchableOpacity>

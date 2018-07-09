@@ -74,11 +74,31 @@ const Followings = [
     }
 ]
 
+const OrderHistories = [
+    {
+        image: require('../assets/images/home_suggestion_first.png'),
+        title: 'Crystal Jade Kitchen',
+        location: 'Tampines Mall, #03-10',
+        date: '5:30PM, Today',
+        cost: 15.15,
+        payment: 'CASH'
+    },
+    {
+        image: require('../assets/images/home_suggestion_second.png'),
+        title: 'SushiPlace',
+        location: 'Tampines Mall, #03-15',
+        date: '7:30PM, Yesterday',
+        cost: 22.35,
+        payment: 'PayLah!'
+    }
+]
+
 const Constants = {
     GetStartEnties,
     Promotions,
     Suggestions,
-    Followings
+    Followings,
+    OrderHistories
 }
 
 export default Constants

@@ -28,6 +28,7 @@ import NearBy from './src/screens/nearby/index';
 import Profile from './src/screens/profile/index';
 import EditProfile from './src/screens/editProfile/index';
 import Following from './src/screens/following/index';
+import OrderHistory from './src/screens/orderHistory/index';
 
 import images from './src/Lib/Images';
 
@@ -87,6 +88,7 @@ export default class App extends Component {
             <Scene key="profile" title="Profile" hideNavBar component={Profile} />
             <Scene key="editProfile" title="Edit Profile" hideNavBar component={EditProfile} />
             <Scene key="following" title="Following" hideNavBar component={Following} />
+            <Scene key="orderHistory" title="OrderHistory" hideNavBar component={OrderHistory} />
           </Drawer>
         </Scene>
       </Router>

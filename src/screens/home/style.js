@@ -118,13 +118,15 @@ var styles = StyleSheet.create({
     },
 
     subCategorysContainer: {
+        backgroundColor: 'white',
         flexDirection: 'row',
-        marginLeft: 20
+        paddingBottom: 10
     },
 
     subCategoryContainer: {
         alignItems: 'center',
-        marginRight: 'auto'
+        marginRight: 'auto',
+        marginLeft: 'auto'
     },
 
     subCategoryImage: {
