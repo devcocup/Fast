@@ -11,8 +11,13 @@ const TabIcons = {
     NearBySelectedIcon: require('../assets/images/tab_nearby_selected_icon.png')
 }
 
+const RatingImages = {
+    FourRateImage: require('../assets/images/four_rating.png')
+}
+
 const images = {
-    TabIcons
+    TabIcons,
+    RatingImages
 }
 
 export default images

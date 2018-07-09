@@ -49,7 +49,7 @@ class SideMenu extends Component {
                         <Text style={styles.menuItemText}>Following</Text>
                     </TouchableOpacity>
 
-                    <TouchableOpacity style={styles.menuItemContainer} onPress={() => {}}>
+                    <TouchableOpacity style={styles.menuItemContainer} onPress={() => NavigationActions.rewards()}>
                         <Image source={require('../../assets/images/menu_reward_icon.png')}/>
                         <Text style={styles.menuItemText}>Rewards</Text>
                     </TouchableOpacity>

@@ -93,12 +93,22 @@ const OrderHistories = [
     }
 ]
 
+const RewardHistories = [
+    {
+        profile: require('../assets/images/profile.jpg'),
+        rating: require('../assets/images/four_rating.png'),
+        message: 'Xian Long Bao was Super good! Will come',
+        date: '2018-07-09'
+    }
+]
+
 const Constants = {
     GetStartEnties,
     Promotions,
     Suggestions,
     Followings,
-    OrderHistories
+    OrderHistories,
+    RewardHistories
 }
 
 export default Constants
