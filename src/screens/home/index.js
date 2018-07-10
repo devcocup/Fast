@@ -60,12 +60,12 @@ class Home extends Component {
                                 <Text style={styles.headerButtonText}>Scan</Text>
                             </TouchableOpacity>
 
-                            <TouchableOpacity style={styles.headerButton}>
+                            <TouchableOpacity style={styles.headerButton} onPress={() => {}}>
                                 <Image source={require('../../assets/images/home_nearby.png')} style={styles.headerButtonImage}/>
                                 <Text style={styles.headerButtonText}>Near me</Text>
                             </TouchableOpacity>
 
-                            <TouchableOpacity style={styles.headerButton}>
+                            <TouchableOpacity style={styles.headerButton} onPress={() => NavigationAction.bill()}>
                                 <Image source={require('../../assets/images/home_bill.png')} style={styles.headerButtonImage}/>
                                 <Text style={styles.headerButtonText}>View Bill</Text>
                             </TouchableOpacity>

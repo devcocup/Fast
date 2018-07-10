@@ -102,13 +102,33 @@ const RewardHistories = [
     }
 ]
 
+const BillEntity = {
+    image: require('../assets/images/home_suggestion_first.png'),
+    title: 'Crystal Jade Kitchen',
+    location: 'Tampines Mall, #03-10',
+    total_cost: '#13.80',
+    orders: [
+        {
+            image: require('../assets/images/view_order.png'),
+            title: 'Herbal Shrimp Wanton',
+            descriptions: [
+                '1. Herbal Shrimp Wanton less spicy and less chili oil',
+                '2. Herbal Shrimp Wanton'
+            ],
+            count: 2,
+            cost: '$13.80'
+        }
+    ]
+}
+
 const Constants = {
     GetStartEnties,
     Promotions,
     Suggestions,
     Followings,
     OrderHistories,
-    RewardHistories
+    RewardHistories,
+    BillEntity
 }
 
 export default Constants
