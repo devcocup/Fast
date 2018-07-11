@@ -125,7 +125,64 @@ var styles = StyleSheet.create({
         borderRadius: 10,
         justifyContent: 'center',
         alignItems: 'center'
+    },
+
+    modalContainer: {
+        width: width * 0.9,
+        borderRadius: 30,
+        backgroundColor: 'white',
+        alignItems: 'center'
+    },
+
+    modalCloseButton: {
+        position: 'absolute',
+        top: 20,
+        right: 20
+    },
+
+    modalHeaderText: {
+        fontFamily: 'Ubuntu-R',
+        fontSize: 25,
+        marginTop: 25,
+    },
+
+    modalHeaderLine: {
+        height: 0.5,
+        width: width * 0.9,
+        backgroundColor: '#D6D6D6',
+        marginTop: 20
+    },
+
+    modalPaymentButtonsContainer: {
+        flexDirection: 'row',
+        marginTop: 20,
+        width: width * 0.9
+    },
+
+    modalPaymentButton: {
+        width: 60,
+        height: 60,
+        marginLeft: 'auto',
+        marginRight: 'auto',
+        borderRadius: 10,
+        alignItems: 'center',
+        justifyContent: 'center'
+    },
+
+    modalPaymentButtonText: {
+        fontFamily: 'Ubuntu-M',
+        fontSize: 15,
+        color: '#1E81CE'
+    },
+
+    modalProceedButton: {
+        width: width * 0.6,
+        height: 50,
+        borderRadius: 10,
+        justifyContent: 'center',
+        alignItems: 'center'
     }
+
 });
 
 export default styles;

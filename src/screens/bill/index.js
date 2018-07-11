@@ -7,7 +7,9 @@ import {
     ScrollView
 } from 'react-native';
 
+import { Actions as NavigationActions } from 'react-native-router-flux';
 import LinearGradient from 'react-native-linear-gradient';
+import Modal from 'react-native-modal';
 import OrderCard from './OrderCard';
 import Constants from '../../Lib/Constants';
 
@@ -19,7 +21,8 @@ class Bill extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            share: true
+            share: true,
+            showModal: false
         }
     }
 
@@ -85,7 +88,44 @@ class Bill extends Component {
                     </ScrollView>
                 </View>
 
-                <TouchableOpacity style={{marginBottom: 15, marginTop: 15}}>
+                <Modal
+                    isVisible={this.state.showModal}
+                    onBackdropPress={() => this.setState({ showModal: false })}
+                >
+                    <View style={styles.modalContainer}>
+                        <TouchableOpacity style={styles.modalCloseButton} onPress={() => { this.setState({showModal: false}); }}>
+                            <Image source={require('../../assets/images/close_icon.png')}/>    
+                        </TouchableOpacity>
+                        
+                        <Text style={styles.modalHeaderText}>Payment Method</Text>
+                        <View style={styles.modalHeaderLine}/>
+                        <View style={styles.modalPaymentButtonsContainer}>
+                            <TouchableOpacity style={[styles.modalPaymentButton, {borderWidth: 1, borderColor: '#1E81CE'}]}>
+                                <Text style={styles.modalPaymentButtonText}>CASH</Text>
+                            </TouchableOpacity>
+
+                            <TouchableOpacity style={[styles.modalPaymentButton, {borderWidth: 1, borderColor: '#1E81CE'}]}>
+                                <Text style={styles.modalPaymentButtonText}>CARD</Text>
+                            </TouchableOpacity>
+
+                            <TouchableOpacity style={[styles.modalPaymentButton]}>
+                                <Image source={require('../../assets/images/home_dbs_payment.png')}/>
+                            </TouchableOpacity>
+
+                            <TouchableOpacity style={[styles.modalPaymentButton]}>
+                                <Image source={require('../../assets/images/home_grab_payment.png')}/>
+                            </TouchableOpacity>
+                        </View>
+
+                        <TouchableOpacity onPress={() => { this.setState({showModal: false}); }} style={{marginBottom: 30, marginTop: 80}}>
+                            <LinearGradient start={{x: 0, y: 0}} end={{x: 1, y: 1}} colors={['#1E81CE', '#78B9EB']} style={styles.modalProceedButton}>
+                                <Text style={{fontFamily: 'Ubuntu-B', fontSize: 18, color: 'white'}}>Proceed</Text>
+                            </LinearGradient>
+                        </TouchableOpacity>
+                    </View>
+                </Modal>
+
+                <TouchableOpacity style={{marginBottom: 15, marginTop: 15}} onPress={() => { this.setState({showModal: true}); }}>
                     <LinearGradient start={{x: 0, y: 0}} end={{x: 1, y: 1}} colors={['#1E81CE', '#78B9EB']} style={styles.checkButtonContainer}>
                         <Text style={{fontFamily: 'Ubuntu-B', fontSize: 18, color: 'white'}}>Checkout</Text>
                     </LinearGradient>
