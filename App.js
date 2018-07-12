@@ -69,37 +69,6 @@ export default class App extends Component {
   render() {
     return (
       <AppNavigation />
-      // <Router>
-      //   <Scene key="root">
-      //     <Scene initial key="login" hideNavBar component={LogIn}/>
-      //     <Scene key="signup" hideNavBar component={SignUp}/>
-      //     <Scene key="forgot" hideNavBar component={ForgotPassword}/>
-      //     <Scene key="verify" hideNavBar component={Verify}/>
-      //     <Scene key="quickstart" hideNavBar component={QuickStart}/>
-      //     <Drawer 
-      //       key="menu" 
-      //       hideNavBar 
-      //       drawerImage={require('./src/assets/images/menu_icon_blue.png')} 
-      //       contentComponent={SideMenu} 
-      //     >
-      //       <Scene key="tabs" tabs={true} tabBarPosition='bottom' activeTintColor="#1F81CE">
-      //         <Scene key="home" title="Home" hideNavBar component={Home} icon={TabIcon} iconName="home">
-      //           <Scene key="discover" title="Discover" hideNavBar component={Discover} />
-      //         </Scene>
-      //         <Scene key="scan" title="Scan" hideNavBar component={Scan} icon={TabIcon} iconName="scan"/>
-      //         <Scene key="queue" title="Queue" hideNavBar component={Queue} icon={TabIcon} iconName="queue"/>
-      //         <Scene key="bill" title="Bill" hideNavBar component={Bill} icon={TabIcon} iconName="bill"/>
-      //         <Scene key="nearby" title="NearBy" hideNavBar component={NearBy} icon={TabIcon} iconName="nearby"/>
-      //       </Scene>
-
-      //       <Scene key="profile" title="Profile" hideNavBar component={Profile} />
-      //       <Scene key="editProfile" title="Edit Profile" hideNavBar component={EditProfile} />
-      //       <Scene key="following" title="Following" hideNavBar component={Following} />
-      //       <Scene key="orderHistory" title="OrderHistory" hideNavBar component={OrderHistory} />
-      //       <Scene key="rewards" title="View Reviews" hideNavBar component={Rewards} />
-      //     </Drawer>
-      //   </Scene>
-      // </Router>
     );
   }
 }
