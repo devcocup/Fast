@@ -10,14 +10,14 @@ import {
 
 import { Actions as NavigationAction } from 'react-native-router-flux';
 
-import PromotionCard from './PromotionCard';
-import SuggestionCard from './SuggestionCard';
+import PromotionCard from '../home/PromotionCard';
+import SuggestionCard from '../home/SuggestionCard';
 import Constants from '../../Lib/Constants';
 import styles from './style.js';
 
 const { Promotions, Suggestions } = Constants
 
-class Home extends Component {
+class Discover extends Component {
 
     constructor (props) {
         super(props);
@@ -34,16 +34,15 @@ class Home extends Component {
     }
 
     render() {
-        const NavigationAction = this.props.navigation;
         return (
             <View style={styles.container}>
                 <ScrollView>
                     <View style={styles.navigationBarContainer}>
-                        <TouchableOpacity style={styles.menuButton} onPress={() => NavigationAction.openDrawer()}>
+                        <TouchableOpacity style={styles.menuButton} onPress={() => NavigationAction.drawerOpen()}>
                             <Image source={require('../../assets/images/menu_icon_blue.png')} />
                         </TouchableOpacity>
 
-                        <View style={{marginLeft: 'auto', flexDirection: 'row'}}>
+                        {/* <View style={{marginLeft: 'auto', flexDirection: 'row'}}>
                             <TouchableOpacity style={styles.profileButton}>
                                 <Image source={require('../../assets/images/home_profile.png')} />
                             </TouchableOpacity>
@@ -51,22 +50,22 @@ class Home extends Component {
                             <TouchableOpacity style={styles.emailButton}>
                                 <Image source={require('../../assets/images/home_email.png')} />
                             </TouchableOpacity>
-                        </View>
+                        </View> */}
                     </View>
 
                     <ImageBackground source={require('../../assets/images/home_header_image.png')} style={styles.headerContainer}>
                         <View style={styles.headerButtonsContainer}>
-                            <TouchableOpacity style={styles.headerButton} onPress={() => NavigationAction.navigate('Scan')}>
+                            <TouchableOpacity style={styles.headerButton} onPress={() => NavigationAction.scan()}>
                                 <Image source={require('../../assets/images/home_scan.png')} style={styles.headerButtonImage}/>
                                 <Text style={styles.headerButtonText}>Scan</Text>
                             </TouchableOpacity>
 
-                            <TouchableOpacity style={styles.headerButton} onPress={() => NavigationAction.navigate('NearBy')}>
+                            <TouchableOpacity style={styles.headerButton} onPress={() => NavigationAction.nearby()}>
                                 <Image source={require('../../assets/images/home_nearby.png')} style={styles.headerButtonImage}/>
                                 <Text style={styles.headerButtonText}>Near me</Text>
                             </TouchableOpacity>
 
-                            <TouchableOpacity style={styles.headerButton} onPress={() => NavigationAction.navigate('Bill')}>
+                            <TouchableOpacity style={styles.headerButton} onPress={() => NavigationAction.bill()}>
                                 <Image source={require('../../assets/images/home_bill.png')} style={styles.headerButtonImage}/>
                                 <Text style={styles.headerButtonText}>View Bill</Text>
                             </TouchableOpacity>
@@ -87,7 +86,7 @@ class Home extends Component {
                     </View>
 
                     <ScrollView style={styles.categoryContainer} horizontal={true}>
-                        <TouchableOpacity style={styles.categoryButton} onPress={() => NavigationAction.reset('discover')}>
+                        <TouchableOpacity style={styles.categoryButton}>
                             <ImageBackground source={require('../../assets/images/home_discover.png')} style={styles.categoryImage}>
                                 <Text style={styles.categoryText}>Discover</Text>
                             </ImageBackground>
@@ -180,4 +179,4 @@ class Home extends Component {
     }
 }
 
-export default Home;
+export default Discover;

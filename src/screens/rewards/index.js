@@ -7,7 +7,6 @@ import {
     ScrollView
 } from 'react-native';
 
-import { Actions as NavigationActions } from 'react-native-router-flux';
 import LinearGradient from 'react-native-linear-gradient';
 import RewardHistoryCard from './RewardHistoryCard';
 import Constants from '../../Lib/Constants';
@@ -40,9 +39,10 @@ class Rewards extends Component {
     }
 
     render() {
+        const NavigationActions = this.props.navigation;
         return (
             <View style={styles.container}>
-                <TouchableOpacity style={styles.backButton} onPress={() => NavigationActions.pop()}>
+                <TouchableOpacity style={styles.backButton} onPress={() => NavigationActions.goBack()}>
                     <Image source={require('../../assets/images/black_back_icon.png')} style={{resizeMode: 'contain'}}/>
                 </TouchableOpacity>
 

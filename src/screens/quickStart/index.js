@@ -7,7 +7,6 @@ import {
     Dimensions
 } from 'react-native';
 
-import { Actions as NavigationActions } from 'react-native-router-flux';
 import Carousel, { Pagination } from 'react-native-snap-carousel';
 
 import Constants from '../../Lib/Constants';
@@ -38,7 +37,7 @@ class QuickStart extends Component {
     }
 
     next() {
-        NavigationActions.home();
+        this.props.navigation.navigate('Home')
         // if (this.state.activeSlide < 3) {
         //     this.setState({
         //         activeSlide: this.state.activeSlide + 1

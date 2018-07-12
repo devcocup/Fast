@@ -7,16 +7,17 @@ import {
     Image
 } from 'react-native';
 
-import { Actions as NavigationActions } from 'react-native-router-flux';
 import LinearGradient from 'react-native-linear-gradient'
 
 import styles from './style.js';
 
 class ForgotPassword extends Component {
     render() {
+        const NavigationActions = this.props.navigation;
+
         return (
             <LinearGradient colors={['#1E81CE', '#78B9EB']} style={styles.container}>
-                <TouchableOpacity style={styles.backButton} onPress={() => NavigationActions.pop()}>
+                <TouchableOpacity style={styles.backButton} onPress={() => NavigationActions.goBack()}>
                     <Image source={require('../../assets/images/back_icon.png')} style={{resizeMode: 'contain'}}/>
                 </TouchableOpacity>
 

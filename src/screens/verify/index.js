@@ -7,7 +7,6 @@ import {
     Image
 } from 'react-native';
 
-import { Actions as NavigationActions } from 'react-native-router-flux';
 import LinearGradient from 'react-native-linear-gradient';
 
 import styles from './style.js';
@@ -21,12 +20,14 @@ class Verify extends Component {
     }
 
     render() {
+        const NavigationActions = this.props.navigation;
+
         return (
             <LinearGradient colors={['#1E81CE', '#78B9EB']} style={styles.container}>
 
                 <Text style={styles.placeHolderTextContainer}>FAST</Text>
 
-                <TouchableOpacity style={styles.backButton} onPress={() => NavigationActions.pop()}>
+                <TouchableOpacity style={styles.backButton} onPress={() => NavigationActions.goBack()}>
                     <Image source={require('../../assets/images/back_icon.png')} style={{resizeMode: 'contain'}}/>
                 </TouchableOpacity>
 
@@ -50,7 +51,7 @@ class Verify extends Component {
                         style={styles.textInput}/>
                 </View>
                 
-                <TouchableOpacity style={styles.verifyContainer} onPress={() => NavigationActions.quickstart()}>
+                <TouchableOpacity style={styles.verifyContainer} onPress={() => NavigationActions.navigate('QuickStartScreen')}>
                     <Text style={{fontFamily: 'Ubuntu-M', color: '#1961A1', fontSize: 15, height: 45, textAlign: 'center', textAlignVertical: 'center'}}>VERIFY</Text>
                 </TouchableOpacity>
 

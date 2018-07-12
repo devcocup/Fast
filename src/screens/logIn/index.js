@@ -7,13 +7,14 @@ import {
     Image
 } from 'react-native';
 
-import { Actions as NavigationActions } from 'react-native-router-flux';
 import LinearGradient from 'react-native-linear-gradient'
 
 import styles from './style.js';
 
 class LogIn extends Component {
     render() {
+        const NavigationActions = this.props.navigation;
+
         return (
             <LinearGradient colors={['#1E81CE', '#78B9EB']} style={styles.container}>                
                 <View style={styles.headerContainer}>
@@ -48,16 +49,16 @@ class LogIn extends Component {
                             style={styles.textInput}/>
                     </View>
 
-                    <TouchableOpacity style={styles.loginButtonContainer} onPress={() => NavigationActions.home()}>
+                    <TouchableOpacity style={styles.loginButtonContainer} onPress={() => NavigationActions.navigate('Menu')}>
                         <Text style={{fontFamily: 'Ubuntu-M', color: 'white', fontSize: 15}}>LOGIN</Text>
                     </TouchableOpacity>
                 </View>
 
-                <TouchableOpacity style={{marginTop: 25}} onPress={() => NavigationActions.forgot()}>
+                <TouchableOpacity style={{marginTop: 25}} onPress={() => NavigationActions.navigate('ForgotPasswordScreen')}>
                     <Text style={{fontFamily: 'Ubuntu-LI', color: 'white', fontSize: 15}}>Forgot Password?</Text>
                 </TouchableOpacity>
 
-                <TouchableOpacity style={styles.signupContainer} onPress={() => NavigationActions.signup()}>
+                <TouchableOpacity style={styles.signupContainer} onPress={() => NavigationActions.navigate('SignUpScreen')}>
                     <Text style={{fontFamily: 'Ubuntu-M', color: '#1961A1', fontSize: 15}}>New User?</Text>
                 </TouchableOpacity>
             </LinearGradient>

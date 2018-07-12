@@ -14,6 +14,7 @@ import styles from './style';
 
 class Scan extends Component {
     render() {
+        const navigation = this.props.navigation;
         return (
             <View style={styles.container}>
                 <QRCodeScanner
@@ -22,7 +23,7 @@ class Scan extends Component {
                 />
 
                 <View style={styles.buttonsContainer}>
-                    <TouchableOpacity style={[styles.buttonContainer, {backgroundColor: 'rgba(120, 132, 158, 0.16)'}]}>
+                    <TouchableOpacity style={[styles.buttonContainer, {backgroundColor: 'rgba(120, 132, 158, 0.16)'}]} onPress={() => navigation.goBack()}>
                         <Text style={[styles.buttonText, {color: '#454F63'}]}>BACK</Text>
                     </TouchableOpacity>
 

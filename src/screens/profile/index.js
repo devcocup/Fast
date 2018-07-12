@@ -7,7 +7,6 @@ import {
     Image
 } from 'react-native';
 
-import { Actions as NavigationActions } from 'react-native-router-flux';
 import LinearGradient from 'react-native-linear-gradient';
 
 import styles from './style.js';
@@ -21,10 +20,11 @@ class Profile extends Component {
     }
 
     render() {
+        const NavigationActions = this.props.navigation;
         return (
             <View style={styles.container}>
                 <LinearGradient colors={['#1E81CE', '#78B9EB']} style={styles.headerContainer}>
-                    <TouchableOpacity style={styles.backButton} onPress={() => NavigationActions.pop()}>
+                    <TouchableOpacity style={styles.backButton} onPress={() => NavigationActions.goBack()}>
                         <Image source={require('../../assets/images/back_icon.png')} style={{resizeMode: 'contain'}}/>
                     </TouchableOpacity> 
 
@@ -60,7 +60,7 @@ class Profile extends Component {
                 </LinearGradient>
 
                 <View style={{marginTop: 30, flexDirection: 'row', flexWrap: 'wrap', padding: 10, alignItems: 'center'}}>
-                    <TouchableOpacity style={styles.buttonContainer} onPress={() => NavigationActions.editProfile()}>
+                    <TouchableOpacity style={styles.buttonContainer} onPress={() => NavigationActions.navigate('EditProfileScreen')}>
                         <Image source={require('../../assets/images/profile_edit.png')} style={{width: 30, height: 30, resizeMode: 'contain'}}/>
                         <Text style={{fontFamily: 'Ubuntu-R', fontSize: 10, marginTop: 5}}>Edit Profile</Text>
                     </TouchableOpacity>

@@ -7,17 +7,17 @@ import {
     ImageBackground
 } from 'react-native';
 
-import { Actions as NavigationActions } from 'react-native-router-flux';
 import LinearGradient from 'react-native-linear-gradient'
 
 import styles from './style.js';
 
 class SideMenu extends Component {
     render() {
+        const NavigationActions = this.props.navigation;
         return (
             <View style={styles.container}>
                 <LinearGradient colors={['#1E81CE', '#78B9EB']} style={styles.headerContainer}>
-                    <TouchableOpacity style={styles.menuButton} onPress={() => NavigationActions.pop()}>
+                    <TouchableOpacity style={styles.menuButton} onPress={() => NavigationActions.goBack()}>
                         <Image source={require('../../assets/images/menu_icon_white.png')}/>
                     </TouchableOpacity>
                     
@@ -34,22 +34,22 @@ class SideMenu extends Component {
                 </LinearGradient>
 
                 <View style={styles.menuItems}>
-                    <TouchableOpacity style={styles.menuItemContainer} onPress={() => NavigationActions.profile()}>
+                    <TouchableOpacity style={styles.menuItemContainer} onPress={() => NavigationActions.navigate('ProfileScreen')}>
                         <Image source={require('../../assets/images/menu_profile_icon.png')}/>
                         <Text style={styles.menuItemText}>Profile</Text>
                     </TouchableOpacity>
 
-                    <TouchableOpacity style={styles.menuItemContainer} onPress={() => NavigationActions.orderHistory()}>
+                    <TouchableOpacity style={styles.menuItemContainer} onPress={() => NavigationActions.navigate('OrderHistoryScreen')}>
                         <Image source={require('../../assets/images/menu_order_history_icon.png')}/>
                         <Text style={styles.menuItemText}>Order History</Text>
                     </TouchableOpacity>
 
-                    <TouchableOpacity style={styles.menuItemContainer} onPress={() => NavigationActions.following()}>
+                    <TouchableOpacity style={styles.menuItemContainer} onPress={() => NavigationActions.navigate('FollowingScreen')}>
                         <Image source={require('../../assets/images/menu_follow_icon.png')}/>
                         <Text style={styles.menuItemText}>Following</Text>
                     </TouchableOpacity>
 
-                    <TouchableOpacity style={styles.menuItemContainer} onPress={() => NavigationActions.rewards()}>
+                    <TouchableOpacity style={styles.menuItemContainer} onPress={() => NavigationActions.navigate('RewardsScreen')}>
                         <Image source={require('../../assets/images/menu_reward_icon.png')}/>
                         <Text style={styles.menuItemText}>Rewards</Text>
                     </TouchableOpacity>

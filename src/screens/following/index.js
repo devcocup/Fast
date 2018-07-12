@@ -6,7 +6,6 @@ import {
     ScrollView
 } from 'react-native';
 
-import { Actions as NavigationActions } from 'react-native-router-flux';
 import FollowingCard from './FollowingCard';
 import Constants from '../../Lib/Constants';
 
@@ -20,9 +19,10 @@ class Following extends Component {
     }
 
     render() {
+        const NavigationActions = this.props.navigation;
         return (
             <ScrollView style={styles.container}>
-                <TouchableOpacity style={styles.backButton} onPress={() => NavigationActions.pop()}>
+                <TouchableOpacity style={styles.backButton} onPress={() => NavigationActions.goBack()}>
                     <Image source={require('../../assets/images/black_back_icon.png')} style={{resizeMode: 'contain'}}/>
                 </TouchableOpacity>
 

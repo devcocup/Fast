@@ -7,7 +7,6 @@ import {
     Image
 } from 'react-native';
 
-import { Actions as NavigationActions } from 'react-native-router-flux';
 import LinearGradient from 'react-native-linear-gradient';
 import PhoneInput from 'react-native-phone-input';
 import DatePicker from 'react-native-datepicker';
@@ -23,12 +22,14 @@ class SignUp extends Component {
     }
 
     render() {
+        const NavigationActions = this.props.navigation;
+
         return (
             <LinearGradient colors={['#1E81CE', '#78B9EB']} style={styles.container}>
 
                 <Text style={styles.placeHolderTextContainer}>FAST</Text>
 
-                <TouchableOpacity style={styles.backButton} onPress={() => NavigationActions.pop()}>
+                <TouchableOpacity style={styles.backButton} onPress={() => NavigationActions.goBack()}>
                     <Image source={require('../../assets/images/back_icon.png')} style={{resizeMode: 'contain'}}/>
                 </TouchableOpacity>
 
@@ -86,7 +87,7 @@ class SignUp extends Component {
                     />
                 </View>
                 
-                <TouchableOpacity style={styles.doneButton} onPress={() => NavigationActions.verify()}>
+                <TouchableOpacity style={styles.doneButton} onPress={() => NavigationActions.navigate('VerifyScreen')}>
                     <Text style={{fontFamily: 'Ubuntu-M', color: '#1961A1', fontSize: 15}}>Done</Text>
                 </TouchableOpacity>
 
