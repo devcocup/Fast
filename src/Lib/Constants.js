@@ -121,6 +121,35 @@ const BillEntity = {
     ]
 }
 
+const NearByEntities = [
+    {
+        image: require('../assets/images/home_suggestion_first.png'),
+        close: '10pm',
+        title: 'Crystal Jade Kitchen',
+        is_halal: false,
+        rating_image: require('../assets/images/four_rating.png'),
+        review: 10,
+        location: 'Tampines Mall, #03-10',
+        category: 'Chinese Cuisine',
+        distance: '200',
+        time: '10',
+        rating: 4
+    },
+    {
+        image: require('../assets/images/home_suggestion_second.png'),
+        close: '10pm',
+        title: 'Sushi Palace',
+        is_halal: true,
+        rating_image: require('../assets/images/five_rating.png'),
+        review: 18,
+        location: 'Tampines Mall, #03-15',
+        category: 'Japanese Cuisine',
+        distance: '200',
+        time: '25',
+        rating: 5
+    }
+]
+
 const Constants = {
     GetStartEnties,
     Promotions,
@@ -128,7 +157,8 @@ const Constants = {
     Followings,
     OrderHistories,
     RewardHistories,
-    BillEntity
+    BillEntity,
+    NearByEntities
 }
 
 export default Constants
