@@ -141,7 +141,8 @@ var styles = StyleSheet.create({
     },
 
     modalHeader: {
-        flexDirection: 'row'
+        flexDirection: 'row',
+        alignItems: 'center'
     },
 
     modalHeaderTitleText: {

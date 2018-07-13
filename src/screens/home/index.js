@@ -87,7 +87,7 @@ class Home extends Component {
                     </View>
 
                     <ScrollView style={styles.categoryContainer} horizontal={true}>
-                        <TouchableOpacity style={styles.categoryButton} onPress={() => NavigationAction.reset('discover')}>
+                        <TouchableOpacity style={styles.categoryButton} onPress={() => NavigationAction.navigate('Discover')}>
                             <ImageBackground source={require('../../assets/images/home_discover.png')} style={styles.categoryImage}>
                                 <Text style={styles.categoryText}>Discover</Text>
                             </ImageBackground>
@@ -158,7 +158,7 @@ class Home extends Component {
 
                     <View style={{marginTop: 30}}>
                         <View style={styles.modalHeader}>
-                            <Text style={styles.modalHeaderTitleText}>Ongoing Promotion</Text>
+                            <Text style={styles.modalHeaderTitleText}>Suggested for you</Text>
                             <TouchableOpacity>
                                 <Text style={styles.moreText}>More ></Text>
                             </TouchableOpacity>

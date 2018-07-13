@@ -57,6 +57,50 @@ const Suggestions = [
     }
 ]
 
+const PickEntities = [
+    {
+        image: require('../assets/images/discover_pick_first.png'),
+        title: 'Ya Kung Kaya Toast',
+        category: 'Drinks',
+        location: '200m, Tampines Mall'
+    },
+    {
+        image: require('../assets/images/discover_pick_second.png'),
+        title: 'Songfa Bak Ku teh',
+        category: 'Chinese Cuisine',
+        location: '3.5km, Clarke Quay'
+    }
+]
+
+const BloggerEntities = [
+    {
+        image: require('../assets/images/discover_blogger_first.png'),
+        title: 'MANEKO-AFFORDABLE JAPANESE RESTAURANT',
+        by: 'LadyIronChef',
+        detail: {
+            image: require('../assets/images/home_suggestion_first.png'),
+            title: 'Sushi Palace',
+            location: 'Tampines Mal, #03-15',
+            category: 'Japanese Cusine',
+            distance: '200m',
+            time: '10PM'
+        }
+    },
+    {
+        image: require('../assets/images/discover_blogger_second.png'),
+        title: 'Shenton Way Golden Bridge Roasted Chicken Rice',
+        by: 'Foodking',
+        detail: {
+            image: require('../assets/images/home_suggestion_first.png'),
+            title: 'Sushi Palace',
+            location: 'Tampines Mal, #03-15',
+            category: 'Japanese Cusine',
+            distance: '200m',
+            time: '10PM'
+        }
+    }
+]
+
 const Followings = [
     {
         image: require('../assets/images/home_suggestion_second.png'),
@@ -158,7 +202,9 @@ const Constants = {
     OrderHistories,
     RewardHistories,
     BillEntity,
-    NearByEntities
+    NearByEntities,
+    PickEntities,
+    BloggerEntities
 }
 
 export default Constants

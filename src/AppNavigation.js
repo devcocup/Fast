@@ -26,9 +26,21 @@ import OrderHistory from './screens/orderHistory/index';
 import Rewards from './screens/rewards/index';
 import Discover from './screens/discover/index';
 
-const TabStack = TabNavigator({
-    Home: { 
+const HomeStack = StackNavigator({
+    Home: {
         screen: Home,
+    },
+    Discover: {
+        screen: Discover
+    }
+}, {
+    headerMode: 'none',
+    initialRouteName: 'Home'
+})
+
+const TabStack = TabNavigator({
+    HomeTab: { 
+        screen: HomeStack,
         navigationOptions: {
             tabBarLabel: 'Home',
             tabBarIcon: ({ focused }) => focused ? <Image source={require('./assets/images/tab_home_selected_icon.png')} /> : <Image source={require('./assets/images/tab_home_icon.png')} />,
@@ -94,7 +106,7 @@ const TabStack = TabNavigator({
             backgroundColor: 'white'
         }
     },
-    initialRouteName: 'Home'
+    initialRouteName: 'HomeTab'
 })
 
 const DrawerStack = DrawerNavigator({

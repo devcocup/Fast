@@ -126,11 +126,11 @@ class NearBy extends Component {
     }
 
     render() {
-        console.log(this.state.distanceList)
+        const NavigationAction = this.props.navigation;
         return (
             <View style={styles.container}>
                 <View style={styles.headerContainer}>
-                    <TouchableOpacity style={styles.backButton} onPress={() => NavigationAction.pop()}>
+                    <TouchableOpacity style={styles.backButton} onPress={() => NavigationAction.goBack()}>
                         <Image source={require('../../assets/images/black_back_icon.png')} />
                     </TouchableOpacity>
 
