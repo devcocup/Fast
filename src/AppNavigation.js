@@ -25,6 +25,7 @@ import Following from './screens/following/index';
 import OrderHistory from './screens/orderHistory/index';
 import Rewards from './screens/rewards/index';
 import Discover from './screens/discover/index';
+import Search from './screens/search/index';
 
 const HomeStack = StackNavigator({
     Home: {
@@ -32,6 +33,9 @@ const HomeStack = StackNavigator({
     },
     Discover: {
         screen: Discover
+    },
+    Search: {
+        screen: Search
     }
 }, {
     headerMode: 'none',

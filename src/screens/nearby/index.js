@@ -8,8 +8,6 @@ import {
     Image
 } from 'react-native';
 
-import { Actions as NavigationAction } from 'react-native-router-flux';
-
 import NearByCard from './NearByCard';
 import Constants from '../../Lib/Constants';
 import Modal from 'react-native-modal';
@@ -136,7 +134,7 @@ class NearBy extends Component {
 
                     <Text style={styles.headerText}>NearBy</Text>
 
-                    <TouchableOpacity style={styles.searchButton}>
+                    <TouchableOpacity style={styles.searchButton} onPress={() => NavigationAction.navigate('Search')}>
                         <Image source={require('../../assets/images/search_icon.png')}/>
                     </TouchableOpacity>
                 </View>
