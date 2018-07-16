@@ -26,6 +26,7 @@ import OrderHistory from './screens/orderHistory/index';
 import Rewards from './screens/rewards/index';
 import Discover from './screens/discover/index';
 import Search from './screens/search/index';
+import Category from './screens/category/index';
 
 const HomeStack = StackNavigator({
     Home: {
@@ -36,6 +37,9 @@ const HomeStack = StackNavigator({
     },
     Search: {
         screen: Search
+    },
+    Category: {
+        screen: Category
     }
 }, {
     headerMode: 'none',

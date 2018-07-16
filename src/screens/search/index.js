@@ -90,27 +90,27 @@ class Search extends Component {
                 {
                     this.state.food_category && (
                         <View style={styles.subCategorysContainer}>
-                            <TouchableOpacity style={styles.subCategoryContainer}>
+                            <TouchableOpacity style={styles.subCategoryContainer} onPress={() => NavigationAction.navigate('Category', {title: 'Chinese Cuisine', startColor: '#FF416C', endColor: '#EF7676'})}>
                                 <Image source={require('../../assets/images/home_chinese.png')} style={styles.subCategoryImage} borderRadius={10}/>
                                 <Text style={styles.subCategoryText}>Chinese</Text>
                             </TouchableOpacity>
 
-                            <TouchableOpacity style={styles.subCategoryContainer}>
+                            <TouchableOpacity style={styles.subCategoryContainer} onPress={() => NavigationAction.navigate('Category', {title: 'Western Cuisine', startColor: '#3466BB', endColor: '#4897E6'})}>
                                 <Image source={require('../../assets/images/home_western.png')} style={styles.subCategoryImage} borderRadius={10}/>
                                 <Text style={styles.subCategoryText}>Western</Text>
                             </TouchableOpacity>
 
-                            <TouchableOpacity style={styles.subCategoryContainer}>
+                            <TouchableOpacity style={styles.subCategoryContainer} onPress={() => NavigationAction.navigate('Category', {title: 'Muslim Cuisine', startColor: '#29C129', endColor: '#74FF6A'})}>
                                 <Image source={require('../../assets/images/home_muslim.png')} style={styles.subCategoryImage} borderRadius={10}/>
                                 <Text style={styles.subCategoryText}>Muslim</Text>
                             </TouchableOpacity>
 
-                            <TouchableOpacity style={styles.subCategoryContainer}>
+                            <TouchableOpacity style={styles.subCategoryContainer} onPress={() => NavigationAction.navigate('Category', {title: 'Japanese Cuisine', startColor: '#FF3131', endColor: '#FFB267'})}>
                                 <Image source={require('../../assets/images/home_japanese.png')} style={styles.subCategoryImage} borderRadius={10}/>
                                 <Text style={styles.subCategoryText}>Japanese</Text>
                             </TouchableOpacity>
 
-                            <TouchableOpacity style={styles.subCategoryContainer}>
+                            <TouchableOpacity style={styles.subCategoryContainer} onPress={() => NavigationAction.navigate('Category', {title: 'Indian Cuisine', startColor: '#E16900', endColor: '#FFB73A'})}>
                                 <Image source={require('../../assets/images/home_indian.png')} style={styles.subCategoryImage} borderRadius={10}/>
                                 <Text style={styles.subCategoryText}>Indian</Text>
                             </TouchableOpacity>
