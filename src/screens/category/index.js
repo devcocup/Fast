@@ -86,8 +86,6 @@ class Category extends Component {
     }
 
     selectDistance() {
-        console.log(this.state.value)
-
         if (this.state.value == undefined || this.state.value == "") {
             this.setState({
                 isDistanceModalVisible: false,
@@ -105,8 +103,6 @@ class Category extends Component {
                 distance: true
             })
         }
-
-        
     }
 
     chooseDistance = (index) => {

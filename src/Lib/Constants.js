@@ -194,6 +194,37 @@ const NearByEntities = [
     }
 ]
 
+const NotificationEnties = [
+    {
+        image: require('../assets/images/notification_first.png'),
+        date: '29 May',
+        title: 'Up to 20% off! Lunar New Year',
+        category: 'Dinner Promotion',
+        description: 'Valid from 1st June to 30th Auguest 2018*. Available all on outlets!',
+        terms: [
+            'Valid for Weekend Buffet only',
+            'Weekend Lunch (Sat & Sun)',
+            'Weekend Dinner (Fri, Sat & Sun)',
+            'Valid for adults only, a maximum of 6 persons',
+            'Not valid with any other ongoing promotion, offers or loyalty programs'
+        ]
+    },
+    {
+        image: require('../assets/images/notification_second.png'),
+        date: '29 May',
+        title: 'Just $8.80 for all La Mian!',
+        category: 'Dinner Promotion',
+        description: 'Valid from 1st June to 30th Auguest 2018*. Available all on outlets!',
+        terms: [
+            'Valid for Weekend Buffet only',
+            'Weekend Lunch (Sat & Sun)',
+            'Weekend Dinner (Fri, Sat & Sun)',
+            'Valid for adults only, a maximum of 6 persons',
+            'Not valid with any other ongoing promotion, offers or loyalty programs'
+        ]
+    }
+]
+
 const Constants = {
     GetStartEnties,
     Promotions,
@@ -204,7 +235,8 @@ const Constants = {
     BillEntity,
     NearByEntities,
     PickEntities,
-    BloggerEntities
+    BloggerEntities,
+    NotificationEnties
 }
 
 export default Constants

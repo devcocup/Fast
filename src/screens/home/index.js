@@ -48,7 +48,7 @@ class Home extends Component {
                                 <Image source={require('../../assets/images/home_profile.png')} />
                             </TouchableOpacity>
 
-                            <TouchableOpacity style={styles.emailButton}>
+                            <TouchableOpacity style={styles.emailButton} onPress={() => NavigationAction.navigate('Notification')}>
                                 <Image source={require('../../assets/images/home_email.png')} />
                             </TouchableOpacity>
                         </View>

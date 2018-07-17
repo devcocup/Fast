@@ -27,6 +27,7 @@ import Rewards from './screens/rewards/index';
 import Discover from './screens/discover/index';
 import Search from './screens/search/index';
 import Category from './screens/category/index';
+import Notification from './screens/notification/index';
 
 const HomeStack = StackNavigator({
     Home: {
@@ -40,6 +41,9 @@ const HomeStack = StackNavigator({
     },
     Category: {
         screen: Category
+    },
+    Notification: {
+        screen: Notification
     }
 }, {
     headerMode: 'none',
