@@ -93,7 +93,7 @@ class Home extends Component {
                             </ImageBackground>
                         </TouchableOpacity>
 
-                        <TouchableOpacity style={styles.categoryButton}>
+                        <TouchableOpacity style={styles.categoryButton} onPress={() => NavigationAction.navigate('Promotion')}>
                             <ImageBackground source={require('../../assets/images/home_promotion.png')} style={styles.categoryImage}>
                                 <Text style={styles.categoryText}>Promotion</Text>
                             </ImageBackground>

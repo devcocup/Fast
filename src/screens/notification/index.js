@@ -30,7 +30,7 @@ class Notification extends Component {
                 {
                     NotificationEnties.map((follow, index) => {
                         return (
-                            <NotificationCard content={follow} odd={index%2} />
+                            <NotificationCard content={follow} odd={index%2} navigation={NavigationActions} />
                         )
                     })
                 }

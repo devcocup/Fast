@@ -28,6 +28,8 @@ import Discover from './screens/discover/index';
 import Search from './screens/search/index';
 import Category from './screens/category/index';
 import Notification from './screens/notification/index';
+import Promotion from './screens/promotion/index';
+import PromotionDetail from './screens/promotionDetail/index';
 
 const HomeStack = StackNavigator({
     Home: {
@@ -44,6 +46,12 @@ const HomeStack = StackNavigator({
     },
     Notification: {
         screen: Notification
+    },
+    Promotion: {
+        screen: Promotion
+    },
+    PromotionDetail: {
+        screen: PromotionDetail 
     }
 }, {
     headerMode: 'none',

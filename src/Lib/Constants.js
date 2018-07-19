@@ -8,7 +8,7 @@ const GetStartEnties = [
     },
     {
         image: require('../assets/images/get_started_scan.png'),
-        logoText: '',
+        logoText: '',   
         title: 'Scan It!',
         description: 'Scan to take Queue Number and Order your food thru FastApp!',
         color: '#2485D0'
@@ -207,6 +207,10 @@ const NotificationEnties = [
             'Weekend Dinner (Fri, Sat & Sun)',
             'Valid for adults only, a maximum of 6 persons',
             'Not valid with any other ongoing promotion, offers or loyalty programs'
+        ],
+        others: [
+            'Please present valid SAFRA card in person upon ordering or purchasing of product(s) or service(s).\n All dining offers are strictly for dine-in only, unless otherwise stated.\n',
+            'Not valid with other promotions, privileges, discount cards and promotional vouchers, whichever is applicable.\nSAFRA is not an agent of the merchant. Any dispute regarding the quality or service standard must be resolved directly with the respective merchants. SAFRA will not assume any liability or responsibility for the acts of the merchants or any defects in products or services offered in the promotion.\nPrices in non-inclusive of GST & service charge'        
         ]
     },
     {
@@ -221,6 +225,10 @@ const NotificationEnties = [
             'Weekend Dinner (Fri, Sat & Sun)',
             'Valid for adults only, a maximum of 6 persons',
             'Not valid with any other ongoing promotion, offers or loyalty programs'
+        ],
+        others: [
+            'Please present valid SAFRA card in person upon ordering or purchasing of product(s) or service(s).\n All dining offers are strictly for dine-in only, unless otherwise stated.\n',
+            'Not valid with other promotions, privileges, discount cards and promotional vouchers, whichever is applicable.\nSAFRA is not an agent of the merchant. Any dispute regarding the quality or service standard must be resolved directly with the respective merchants. SAFRA will not assume any liability or responsibility for the acts of the merchants or any defects in products or services offered in the promotion.\nPrices in non-inclusive of GST & service charge'        
         ]
     }
 ]

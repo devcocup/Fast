@@ -3,12 +3,10 @@ import { View, Text, Image, TouchableOpacity, StyleSheet, Dimensions } from 'rea
 
 const { height, width } = Dimensions.get('window')
 
-const NotificationCard = ({content, odd}) => {
-
+const NotificationCard = ({content, odd, navigation}) => {
     return (
-
         odd ? (
-            <TouchableOpacity style={styles.container}>
+            <TouchableOpacity style={styles.container} onPress={() => navigation.navigate('PromotionDetail', {content: content})}>
                 <View style={styles.infoContainer}>
                     <Text style={styles.dateText}>{content.date}</Text>
                     <Text style={styles.titleText}>{content.title}</Text>
@@ -19,7 +17,7 @@ const NotificationCard = ({content, odd}) => {
         ) : (
             <TouchableOpacity style={[styles.container, {justifyContent: 'flex-end'}]}>
                 <View style={styles.infoContainer}>
-                    <View style={{borderColor: 'red', borderWidth: 1, marginLeft: 50}}>
+                    <View style={{marginLeft: 50}}>
                         <Text style={styles.dateText}>{content.date}</Text>
                         <Text style={styles.titleText}>{content.title}</Text>
                         <Text style={styles.descriptionText}>{content.description}</Text>
@@ -28,7 +26,7 @@ const NotificationCard = ({content, odd}) => {
                 <Image source={content.image} style={[styles.image, {left: 0}]}/>
             </TouchableOpacity>
         )
-    )        
+    )
 }
 
 const styles = StyleSheet.create({
