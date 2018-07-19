@@ -13,53 +13,117 @@ var styles = StyleSheet.create({
         alignItems: 'center',
     },
 
-    backButton: {
-        position: 'absolute',
-        width: 20,
-        height: 16,
-        left: 20,
-        top: 20
-    },
-
     headerContainer: {
         flexDirection: 'row',
-        justifyContent: 'center',
-        marginTop: "20%",
+        width: width,
+        borderBottomRightRadius: 20,
+        borderBottomLeftRadius: 20,
+        alignItems: 'center',
+        borderWidth: 0.5,
+        height: 50,
+        borderLeftColor: 'transparent',
+        borderRightColor: 'transparent'
     },
 
-    headerImage: {
-        width: 60,
-        height: 90,
-        resizeMode: 'contain'
+    backButton: {
+        marginLeft: 20,
+        marginRight: 20
     },
 
     headerText: {
-        color: 'white',
-        fontSize: 50,
-        textAlign: 'center',
-        textAlignVertical: 'center',
-        fontWeight: '800',
-        marginLeft: 20,
-        height: 80
-    },
-
-    bodyText: {
-        color: 'white',
-        fontSize: 15,
-        fontStyle: 'italic'
+        fontFamily: 'Ubuntu-M',
+        fontSize: 25
     },
 
     bodyContainer: {
-        width: width * 0.6,
-        marginTop: '20%'
+        padding: 20
     },
 
-    textInput: {
-        // width: width * 0.6,
-        color: 'white',
+    titleText: {
+        fontFamily: 'Ubuntu-R',
+        fontSize: 20
+    },
+
+    infoContainer: {
+        borderRadius: 20,
         marginTop: 20,
-        borderBottomWidth: 1,
+        justifyContent: 'center'
+    },
+
+    triangleShape: {
+        position: 'absolute',
+        width: 0,
+        height: 0,
+        borderLeftWidth: 10,
+        borderRightWidth: 10,
+        borderBottomWidth: 20,
+        borderStyle: 'solid',
+        backgroundColor: 'transparent',
+        borderLeftColor: 'transparent',
+        borderRightColor: 'transparent',
         borderBottomColor: 'white'
+    },
+
+    queueNoText: {
+        color: 'white',
+        fontFamily: 'Ubuntu-M',
+        fontSize: 25,
+        marginRight: 5,
+        textAlignVertical: 'bottom'
+    },
+
+    queueTitleText: {
+        color: 'white',
+        fontFamily: 'Ubuntu-M',
+        fontSize: 45,
+        marginBottom: -5
+    },
+
+    infoText: {
+        color: 'white',
+        fontSize: 13,
+        fontFamily: 'Ubuntu-M',
+        marginRight: 5
+    },
+
+    timeText: {
+        color: 'white',
+        fontFamily: 'Ubuntu-BI',
+        fontSize: 20
+    },
+
+    reserveText: {
+        color: 'white',
+        fontFamily: 'Ubuntu-BI',
+        fontSize: 15
+    },
+
+    queueDescriptionText: {
+        color: 'white',
+        marginLeft: 40,
+        fontFamily: 'Ubuntu-MI',
+        fontSize: 15,
+        marginBottom: 15
+    },
+
+    buttonsContainer: {
+        flexDirection: 'row',
+        marginTop: 30,
+        marginBottom: 10
+    },
+
+    buttonContainer: {
+        width: 150,
+        height: 50,
+        borderRadius: 10,
+        alignItems: 'center',
+        justifyContent: 'center',
+        margin: 10
+    },
+
+    buttonText: {
+        fontFamily: 'Ubuntu-M',
+        fontSize: 15
     }
 });
 
