@@ -13,10 +13,11 @@ import styles from './style';
 
 class Queue extends Component {
     render() {
+        const navigation = this.props.navigation;
         return (
             <View style={styles.container}>
                 <View style={styles.headerContainer}>
-                    <TouchableOpacity style={styles.backButton}>
+                    <TouchableOpacity style={styles.backButton} onPress={() => navigation.goBack()}>
                         <Image source={require('../../assets/images/black_back_icon.png')}/>
                     </TouchableOpacity>
                     <Text style={styles.headerText}>Queue</Text>
@@ -53,7 +54,7 @@ class Queue extends Component {
                         <Text style={{textAlign: 'center', fontSize: 14, marginTop: 5}}>You are in the queue for Crystal Jade Kitchen at Tampines Mall.</Text>
 
                         <View style={styles.buttonsContainer}>
-                            <TouchableOpacity>
+                            <TouchableOpacity onPress={() => navigation.navigate('Order')}>
                                 <LinearGradient start={{x: 0, y: 0}} end={{x: 1, y: 1}} colors={['#1E81CE', '#78B9EB']} style={styles.buttonContainer}>
                                     <Text style={[styles.buttonText, {color: 'white'}]}>View E-Menu</Text>
                                 </LinearGradient>

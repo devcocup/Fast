@@ -30,6 +30,7 @@ import Category from './screens/category/index';
 import Notification from './screens/notification/index';
 import Promotion from './screens/promotion/index';
 import PromotionDetail from './screens/promotionDetail/index';
+import Order from './screens/order/index';
 
 const HomeStack = StackNavigator({
     Home: {
@@ -58,6 +59,18 @@ const HomeStack = StackNavigator({
     initialRouteName: 'Home'
 })
 
+const QueueStack = StackNavigator({
+    Queue: {
+        screen: Queue
+    },
+    Order: {
+        screen: Order
+    }
+}, {
+    headerMode: 'none',
+    initialRouteName: 'Queue'
+})
+
 const TabStack = TabNavigator({
     HomeTab: { 
         screen: HomeStack,
@@ -75,8 +88,8 @@ const TabStack = TabNavigator({
         }
     },
     
-    Queue: { 
-        screen: Queue,
+    QueueTab: { 
+        screen: QueueStack,
         navigationOptions: {
             tabBarLabel: 'Queue',
             tabBarIcon: ({ focused }) => focused ? <Image source={require('./assets/images/tab_queue_selected_icon.png')} /> : <Image source={require('./assets/images/tab_queue_icon.png')} />,

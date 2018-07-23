@@ -36,7 +36,7 @@ var styles = StyleSheet.create({
     },
 
     bodyContainer: {
-        padding: 20
+        padding: 15
     },
 
     titleText: {

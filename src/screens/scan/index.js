@@ -27,7 +27,7 @@ class Scan extends Component {
                         <Text style={[styles.buttonText, {color: '#454F63'}]}>BACK</Text>
                     </TouchableOpacity>
 
-                    <TouchableOpacity>
+                    <TouchableOpacity onPress={()=> navigation.navigate('QueueTab')}>
                         <LinearGradient start={{x: 0, y: 0}} end={{x: 1, y: 1}} colors={['#1E81CE', '#78B9EB']} style={styles.buttonContainer}>
                             <Text style={[styles.buttonText, {color: 'white'}]}>SCAN</Text>
                         </LinearGradient>
