@@ -3,7 +3,8 @@ import {
     Text,
     View,
     TouchableOpacity,
-    Image
+    Image,
+    Alert
 } from 'react-native';
 
 
@@ -13,11 +14,25 @@ import LinearGradient from 'react-native-linear-gradient';
 import styles from './style';
 
 class Scan extends Component {
+
+    onSuccess(e) {
+        Alert.alert(
+            'QRCode detected!',
+            e.data,
+            [
+                {text: 'Cancel', onPress: () => console.log('Cancel Pressed'), style: 'cancel'},
+                {text: 'OK', onPress: () => this.props.navigation.navigate('QueueTab')}
+            ],
+            {cancelable: true}
+        )
+    }
+
     render() {
         const navigation = this.props.navigation;
         return (
             <View style={styles.container}>
                 <QRCodeScanner
+                    onRead={this.onSuccess.bind(this)}
                     showMarker
                     customMarker={<Image source={require('../../assets/images/custom_mark.png')} style={{marginTop: -200}}/>}
                 />

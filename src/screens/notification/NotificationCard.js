@@ -15,7 +15,7 @@ const NotificationCard = ({content, odd, navigation}) => {
                 <Image source={content.image} style={[styles.image, {right: 0}]}/>
             </TouchableOpacity>
         ) : (
-            <TouchableOpacity style={[styles.container, {justifyContent: 'flex-end'}]}>
+            <TouchableOpacity style={[styles.container, {justifyContent: 'flex-end'}]}  onPress={() => navigation.navigate('PromotionDetail', {content: content})}>
                 <View style={styles.infoContainer}>
                     <View style={{marginLeft: 50}}>
                         <Text style={styles.dateText}>{content.date}</Text>

@@ -26,6 +26,7 @@ class Order extends Component {
             dim: true,
             fried: false,
             mian: false,
+            count: 5
         }
     }
 
@@ -57,6 +58,21 @@ class Order extends Component {
         this.setState({
             isShowOrderModalVisible: true
         })
+    }
+
+    increaseCount() {
+        console.log(this.state.count)
+        this.setState({
+            count: parseInt(this.state.count) + 1
+        })
+    }
+
+    decreaseCount() {
+        if (parseInt(this.state.count) > 0) {
+            this.setState({
+                count: parseInt(this.state.count) - 1
+            })
+        }
     }
 
     render() {
@@ -117,17 +133,19 @@ class Order extends Component {
                                 style={styles.modalTextInput} 
                                 underlineColorAndroid='transparent'
                                 placeholder="0"
+                                onChangeText={(text) => this.setState({count: parseInt(text)})}
+                                value={this.state.count}
                                 textAlign={'center'}
                             />
                             <View>
                                 <View style={{flexDirection: 'row'}}>
-                                    <TouchableOpacity style={{marginLeft: 'auto', marginRight: 'auto'}}>
+                                    <TouchableOpacity style={{marginLeft: 'auto', marginRight: 'auto'}} onPress={() => this.increaseCount()}>
                                         <LinearGradient start={{x: 0, y: 0}} end={{x: 1, y: 1}} colors={['#EF7676', '#FF416C']} style={styles.modalButtonContainer}>
                                             <Text style={styles.modalButtonText}>+</Text>
                                         </LinearGradient>
                                     </TouchableOpacity>
 
-                                    <TouchableOpacity style={{marginLeft: 'auto', marginRight: 'auto'}}>
+                                    <TouchableOpacity style={{marginLeft: 'auto', marginRight: 'auto'}} onPress={() => this.decreaseCount()}>
                                         <LinearGradient start={{x: 0, y: 0}} end={{x: 1, y: 1}} colors={['#EF7676', '#FF416C']} style={styles.modalButtonContainer}>
                                             <Text style={styles.modalButtonText}>-</Text>
                                         </LinearGradient>

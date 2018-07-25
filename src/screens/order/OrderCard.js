@@ -25,7 +25,7 @@ const OrderCard = ({content, onPress}) => {
                 <Text style={styles.categoryText}>{content.category}</Text>
             </View>
         </TouchableOpacity>
-    )        
+    )
 }
 
 const styles = StyleSheet.create({

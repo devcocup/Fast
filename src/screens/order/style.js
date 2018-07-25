@@ -141,8 +141,6 @@ var styles = StyleSheet.create({
         color: 'white',
         fontWeight: 'bold',
         fontSize: 40,
-        borderWidth: 1,
-        borderColor: 'green',
         textAlign: 'center'
     },
 

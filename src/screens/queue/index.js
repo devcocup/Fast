@@ -62,9 +62,7 @@ class Queue extends Component {
 
                             <TouchableOpacity style={[styles.buttonContainer, {backgroundColor: 'rgba(120, 132, 158, 0.16)'}]} onPress={() => navigation.goBack()}>
                                 <Text style={[styles.buttonText, {color: '#454F63'}]}>Cancel</Text>
-                            </TouchableOpacity>
-
-                            
+                            </TouchableOpacity> 
                         </View>
                     </View>
                 </ScrollView>
