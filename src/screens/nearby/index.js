@@ -164,7 +164,9 @@ class NearBy extends Component {
                     NearByEntities.map((item, index) => {
                         return (
                             <NearByCard 
-                                content={item} 
+                                key={index}
+                                content={item}
+                                navigation={NavigationAction}
                                 category={this.state.category}
                                 queue={this.state.queue}
                                 rating={this.state.rating}

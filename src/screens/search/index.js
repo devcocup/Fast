@@ -64,7 +64,7 @@ class Search extends Component {
                         <Text style={styles.buttonText}>Food Category</Text>
                     </TouchableOpacity>
 
-                    <TouchableOpacity style={[styles.buttonContainer, {backgroundColor: '#665EFF'}]} onPress={() => NavigationAction.navigate('NearBy')}>
+                    <TouchableOpacity style={[styles.buttonContainer, {backgroundColor: '#665EFF'}]} onPress={() => NavigationAction.navigate('NearByTab')}>
                         <Image source={require('../../assets/images/search_nearby_icon.png')}/>
                         <Text style={styles.buttonText}>NearBy</Text>
                     </TouchableOpacity>

@@ -177,7 +177,10 @@ const NearByEntities = [
         category: 'Chinese Cuisine',
         distance: '200',
         time: '10',
-        rating: 4
+        rating: 4,
+        description: 'Award Winning Chinese / Cantonese Cuisine Restaurant. One of the best Dim Sums restaurant in the East Region.',
+        by: 'tomnguyen',
+        message: 'Xiao Long Bao was Super good! Will come back again for dim sum craving.'
     },
     {
         image: require('../assets/images/home_suggestion_second.png'),
@@ -190,7 +193,10 @@ const NearByEntities = [
         category: 'Japanese Cuisine',
         distance: '200',
         time: '25',
-        rating: 5
+        rating: 5,
+        description: 'Award Winning Chinese / Cantonese Cuisine Restaurant. One of the best Dim Sums restaurant in the East Region.',
+        by: 'tomnguyen',
+        message: 'Xiao Long Bao was Super good! Will come back again for dim sum craving.'
     }
 ]
 
@@ -233,6 +239,19 @@ const NotificationEnties = [
     }
 ]
 
+const RestaurantPromotionEntities = [
+    {
+        image: require('../assets/images/notification_first.png'),
+        title: 'Up to 20% off! Lunar New Year Dinner Promotion',
+        descriptions: ['Valid from 1st June to 30th August 2018*.', 'Available all on outlets!']
+    },
+    {
+        image: require('../assets/images/notification_second.png'),
+        title: 'Just $8.80 for all La Mian!',
+        descriptions: ['Valid from 1st June to 30th August 2018*.', 'Available all on outlets!']
+    }
+]
+
 const Constants = {
     GetStartEnties,
     Promotions,
@@ -244,7 +263,8 @@ const Constants = {
     NearByEntities,
     PickEntities,
     BloggerEntities,
-    NotificationEnties
+    NotificationEnties,
+    RestaurantPromotionEntities
 }
 
 export default Constants

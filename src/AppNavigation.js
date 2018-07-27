@@ -31,6 +31,7 @@ import Notification from './screens/notification/index';
 import Promotion from './screens/promotion/index';
 import PromotionDetail from './screens/promotionDetail/index';
 import Order from './screens/order/index';
+import RestaurantProfile from './screens/restaurantProfile/index';
 
 const HomeStack = StackNavigator({
     Home: {
@@ -71,6 +72,18 @@ const QueueStack = StackNavigator({
     initialRouteName: 'Queue'
 })
 
+const NearByTab= StackNavigator({
+    NearBy: {
+        screen: NearBy
+    },
+    RestaurantProfile: {
+        screen: RestaurantProfile
+    }
+}, {
+    headerMode: 'none',
+    initialRouteName: 'NearBy'
+})
+
 const TabStack = TabNavigator({
     HomeTab: { 
         screen: HomeStack,
@@ -104,8 +117,8 @@ const TabStack = TabNavigator({
         }
     },
     
-    NearBy: { 
-        screen: NearBy,
+    NearByTab: { 
+        screen: NearByTab,
         navigationOptions: {
             tabBarLabel: 'NearBy',
             tabBarIcon: ({ focused }) => focused ? <Image source={require('./assets/images/tab_nearby_selected_icon.png')} /> : <Image source={require('./assets/images/tab_nearby_icon.png')} />,

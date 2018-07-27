@@ -61,7 +61,7 @@ class Home extends Component {
                                 <Text style={styles.headerButtonText}>Scan</Text>
                             </TouchableOpacity>
 
-                            <TouchableOpacity style={styles.headerButton} onPress={() => NavigationAction.navigate('NearBy')}>
+                            <TouchableOpacity style={styles.headerButton} onPress={() => NavigationAction.navigate('NearByTab')}>
                                 <Image source={require('../../assets/images/home_nearby.png')} style={styles.headerButtonImage}/>
                                 <Text style={styles.headerButtonText}>Near me</Text>
                             </TouchableOpacity>

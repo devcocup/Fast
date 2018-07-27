@@ -1,12 +1,12 @@
 import React, { Component } from 'react'
-import { View, Text, Image, StyleSheet, Dimensions } from 'react-native'
+import { View, TouchableOpacity, Text, Image, StyleSheet, Dimensions } from 'react-native'
 
 const { height, width } = Dimensions.get('window')
 
-const NearByCard = ({content, category, queue, rating, distance}) => {
+const NearByCard = ({content, category, queue, rating, distance, navigation}) => {
 
     return (
-        <View style={styles.container}>
+        <TouchableOpacity style={styles.container} onPress={() => navigation.navigate('RestaurantProfile', {content: content})}>
             <View style={styles.imageContainer}>
                 <Image source={content.image} style={styles.image}/>
                 <Text style={{fontFamily: 'Ubuntu-R', fontSize: 10, marginTop: 5}}>Close at {content.close}</Text>
@@ -63,7 +63,7 @@ const NearByCard = ({content, category, queue, rating, distance}) => {
                     )
                 }
             </View>
-        </View>
+        </TouchableOpacity>
     )        
 }
 
