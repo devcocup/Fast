@@ -9,7 +9,10 @@ import {
 } from 'react-native';
 
 import LinearGradient from '../../../node_modules/react-native-linear-gradient';
+import MapView from 'react-native-maps';
+import { Marker } from 'react-native-maps'
 import RestaurantPromotionCard from './RestaurantPromotionCard';
+
 import Constants from '../../Lib/Constants';
 import styles from './style.js';
 
@@ -63,8 +66,21 @@ class RestaurantProfile extends Component {
                             </LinearGradient>
                         </TouchableOpacity>
                     </View>
-
-
+                    
+                    <MapView
+                        style={styles.mapView}
+                        region={{
+                            latitude: 37.78825,
+                            longitude: -122.4324,
+                            latitudeDelta: 0.015,
+                            longitudeDelta: 0.0121
+                        }}
+                    >
+                        <Marker
+                            coordinate={{latitude: 37.78825, longitude: -122.4324}}
+                            image={require('../../assets/images/mark_icon.png')}
+                        />
+                    </MapView>
                 </View>
 
                 <View style={styles.descriptionContainer}>

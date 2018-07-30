@@ -180,7 +180,9 @@ const NearByEntities = [
         rating: 4,
         description: 'Award Winning Chinese / Cantonese Cuisine Restaurant. One of the best Dim Sums restaurant in the East Region.',
         by: 'tomnguyen',
-        message: 'Xiao Long Bao was Super good! Will come back again for dim sum craving.'
+        message: 'Xiao Long Bao was Super good! Will come back again for dim sum craving.',
+        latitude: 23.23425,
+        longitude: -124.4234
     },
     {
         image: require('../assets/images/home_suggestion_second.png'),
@@ -196,7 +198,9 @@ const NearByEntities = [
         rating: 5,
         description: 'Award Winning Chinese / Cantonese Cuisine Restaurant. One of the best Dim Sums restaurant in the East Region.',
         by: 'tomnguyen',
-        message: 'Xiao Long Bao was Super good! Will come back again for dim sum craving.'
+        message: 'Xiao Long Bao was Super good! Will come back again for dim sum craving.',
+        latitude: 63.23425,
+        longitude: -104.4234
     }
 ]
 

@@ -77,7 +77,9 @@ var styles = StyleSheet.create({
         marginRight: 20,
         paddingBottom: 20,
         borderBottomWidth: 0.5,
-        borderBottomColor: '#8D8D8D'
+        borderBottomColor: '#8D8D8D',
+        alignItems: 'center',
+        overflow: 'hidden'
     },
 
     locationInfoContainer: {
@@ -97,6 +99,13 @@ var styles = StyleSheet.create({
         borderRadius: 5,
         alignItems: 'center',
         justifyContent: 'center'
+    },
+
+    mapView: {
+        marginTop: 5,
+        width: '75%',
+        height: 120,
+        borderRadius: 20
     },
 
     descriptionContainer: {
